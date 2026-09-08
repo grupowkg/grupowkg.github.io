@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#080b14" />
+    <title>WKG Play</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="player-shell" aria-live="polite">
+      <p class="brand">WKG <span>PLAY</span></p>
+      <section class="player-card" aria-label="Player da rádio">
+        <div class="cover" id="cover" aria-hidden="true"><span>WKG</span></div>
+        <div class="station-copy">
+          <p class="eyebrow">RÁDIO PERSONALIZADA</p>
+          <h1 id="station-name">Carregando rádio…</h1>
+          <p id="track" class="track">Conectando ao som da sua marca</p>
+        </div>
+        <button id="play-button" class="play-button" type="button" aria-label="Tocar rádio" disabled>
+          <span id="play-icon">▶</span>
+        </button>
+        <audio id="audio" preload="none"></audio>
+      </section>
+      <p id="status" class="status">Preparando transmissão</p>
+    </main>
+    <script src="./player.js"></script>
+  </body>
+</html>
