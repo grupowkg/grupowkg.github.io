@@ -1,29 +1,29 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#080b14" />
-    <title>WKG Play</title>
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
-    <main class="player-shell" aria-live="polite">
-      <p class="brand">WKG <span>PLAY</span></p>
-      <section class="player-card" aria-label="Player da rádio">
-        <div class="cover" id="cover" aria-hidden="true"><span>WKG</span></div>
-        <div class="station-copy">
-          <p class="eyebrow">RÁDIO PERSONALIZADA</p>
-          <h1 id="station-name">Carregando rádio…</h1>
-          <p id="track" class="track">Conectando ao som da sua marca</p>
-        </div>
-        <button id="play-button" class="play-button" type="button" aria-label="Tocar rádio" disabled>
-          <span id="play-icon">▶</span>
-        </button>
-        <audio id="audio" preload="none"></audio>
-      </section>
-      <p id="status" class="status">Preparando transmissão</p>
-    </main>
-    <script src="./player.js"></script>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b0b0e">
+  <title>WKG Play</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Syne:wght@700;800&display=swap');
+    :root{--orange:#ff6a00;--ink:#0b0b0e;--muted:#a7a7b1;--line:rgba(255,255,255,.12)}*{box-sizing:border-box}body{margin:0;min-height:100svh;color:#fff;background:radial-gradient(circle at 7% 7%,#513b0077,transparent 26%),radial-gradient(circle at 88% 90%,#3c2c0077,transparent 30%),var(--ink);font-family:'DM Sans',sans-serif}.shell{width:min(1120px,92vw);margin:auto;padding:27px 0 50px}.top{display:flex;align-items:center;justify-content:space-between;margin-bottom:50px}.brand{display:block;position:relative;width:250px;height:64px;overflow:hidden}.brand img{position:absolute;width:275px;max-width:none;left:-23px;top:-108px;filter:invert(1);mix-blend-mode:screen}.badge{border:1px solid var(--line);border-radius:999px;padding:8px 12px;color:var(--muted);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}.badge i{display:inline-block;width:7px;height:7px;border-radius:50%;background:#46dd80;margin-right:6px}.layout{display:grid;grid-template-columns:1.4fr .8fr;gap:25px}.main,.side{border:1px solid var(--line);border-radius:31px;background:linear-gradient(145deg,rgba(255,255,255,.065),rgba(255,255,255,.018));box-shadow:0 30px 70px #0006}.main{padding:clamp(24px,5vw,56px);min-height:570px;position:relative;overflow:hidden}.main:after{content:'';position:absolute;right:-60px;top:-100px;width:300px;height:300px;border:35px solid #ff6a0012;border-radius:50%}.eyebrow{color:var(--orange);font-size:.7rem;letter-spacing:.18em;font-weight:700;margin:0 0 13px}.main h1{font:800 clamp(2.1rem,5vw,4.55rem)/.91 'Syne';letter-spacing:-.09em;max-width:650px;margin:0 0 24px}.main h1 em{color:var(--orange);font-style:normal}.copy{max-width:480px;color:var(--muted);line-height:1.55;margin:0 0 35px}.player{position:relative;z-index:1;border:1px solid #ffffff19;border-radius:21px;background:#08080b;padding:17px;display:grid;grid-template-columns:82px 1fr auto;gap:17px;align-items:center}.art{height:82px;border-radius:15px;background:linear-gradient(140deg,#15151c 20%,#763000),linear-gradient(#000,#000);display:grid;place-items:center;overflow:hidden;box-shadow:inset 0 0 25px #0008}.art b{font:800 1.8rem 'Syne';letter-spacing:-.1em}.meta small{display:block;color:var(--orange);font-size:.62rem;font-weight:700;letter-spacing:.13em;margin-bottom:5px}.meta strong{font-size:1.08rem}.meta p{margin:5px 0 0;color:var(--muted);font-size:.84rem}.button{width:57px;height:57px;display:grid;place-items:center;border:0;border-radius:50%;background:var(--orange);font-size:1.05rem;color:#111;cursor:pointer;transition:.2s}.button:hover{transform:scale(1.06);background:#ffac73}.timeline{grid-column:1/-1;display:grid;grid-template-columns:auto 1fr auto;gap:9px;align-items:center;color:#87878f;font-size:.68rem}.bar{height:3px;background:#33333a;border-radius:5px}.bar span{display:block;width:44%;height:100%;border-radius:5px;background:var(--orange)}.side{padding:28px;display:flex;flex-direction:column}.side h2{font:700 1.25rem 'Syne';letter-spacing:-.05em;margin:0 0 7px}.side>p{margin:0 0 23px;color:var(--muted);font-size:.86rem}.history{display:grid;gap:3px}.history-item{display:grid;grid-template-columns:27px 1fr auto;gap:10px;align-items:center;padding:11px 2px;border-bottom:1px solid #ffffff0c}.history-item:last-child{border-bottom:0}.history-icon{width:27px;height:27px;display:grid;place-items:center;border-radius:8px;background:#ffffff10;color:var(--orange);font-size:.7rem}.history-title{font-size:.8rem;font-weight:600;line-height:1.1}.history-artist{display:block;margin-top:3px;color:var(--muted);font-size:.67rem}.history-time{color:#777780;font-size:.63rem}.live-state{margin-top:auto;padding-top:27px;display:flex;align-items:center;gap:10px;color:#d8d8df;font-size:.78rem;font-weight:600}.live-icon{width:35px;height:35px;display:grid;place-items:center;border:1px solid #ff6a0055;border-radius:11px;background:#ff6a0012;color:var(--orange);font-size:1rem}.sound{height:24px;display:flex;align-items:center;gap:3px}.sound span{width:4px;background:var(--orange);border-radius:8px;animation:wave 1.1s ease-in-out infinite alternate}.sound span:nth-child(1){height:8px}.sound span:nth-child(2){height:18px;animation-delay:.2s}.sound span:nth-child(3){height:12px;animation-delay:.4s}.sound span:nth-child(4){height:22px;animation-delay:.1s}.sound span:nth-child(5){height:10px;animation-delay:.3s}.sound span:nth-child(6){height:16px;animation-delay:.5s}@keyframes wave{to{transform:scaleY(.36)}}.note{text-align:center;margin:31px auto 0;color:#777780;font-size:.75rem;max-width:620px}.note b{color:#c3c3ca}@media(max-width:760px){.top{margin-bottom:30px}.layout{grid-template-columns:1fr}.main{min-height:auto}.main h1{font-size:2.8rem}.side{padding:22px}}@media(max-width:470px){.player{grid-template-columns:62px 1fr}.art{height:62px}.button{grid-column:1/-1;width:100%;height:45px;border-radius:13px}.timeline{grid-column:1/-1}.badge{font-size:.61rem}}
+  </style>
+</head>
+<body>
+  <main class="shell"><header class="top"><span class="brand"><img src="./wkg-play-logo.jpg" alt="WKG Play"></span><div class="badge"><i></i>Ao vivo</div></header><section class="layout"><article class="main"><p class="eyebrow">NOVOS SENTIDOS PARA SEU NEGÓCIO</p><h1>Uma rádio que <em>toca</em> sua marca.</h1><p class="copy">Música, chamadas, anúncios e muito mais. Tudo em uma experiência de áudio com a identidade da sua empresa.</p><div class="player"><div class="art"><b>WKG</b></div><div class="meta"><small>TOCANDO AGORA</small><strong id="radio-name">Carregando rádio…</strong><p id="song-name">Conectando</p></div><button class="button" id="play" aria-label="Tocar rádio">▶</button><div class="timeline"><span>AO VIVO</span><div class="bar"><span></span></div><span>WKG PLAY</span></div></div></article><aside class="side"><h2>Histórico da rádio</h2><p>As últimas músicas reproduzidas na sua programação.</p><div class="history" id="history"></div><div class="live-state"><span class="live-icon"><span class="sound" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></span></span><span>Ao vivo</span></div></aside></section><p class="note" id="status">Conectando ao AzuraCast.</p></main>
+  <script>
+    const queryStation = new URLSearchParams(location.search).get('station');
+    const clientKey = queryStation || location.pathname.split('/').filter(Boolean).at(-1) || 'wkg-play';
+    const stationMap = {'wkg-play':'wkg_play','bia-fit':'bia_fit'};
+    const stationSlug = stationMap[clientKey] || clientKey.replace(/-/g,'_');
+    const azuraOrigin = 'https://radio.wkgplay.com.br';
+    const audio = new Audio(), playButton = document.querySelector('#play'), history = document.querySelector('#history'), status = document.querySelector('#status');
+    const escapeHtml = value => String(value || '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[char]));
+    const ago = timestamp => {const seconds=Math.max(0,Math.round(Date.now()/1000-timestamp));return seconds<60?'agora':seconds<3600?`há ${Math.floor(seconds/60)} min`:`há ${Math.floor(seconds/3600)} h`};
+    const renderHistory = songs => {history.innerHTML=(songs||[]).slice(0,4).map(song=>`<div class="history-item"><span class="history-icon">♫</span><span><b class="history-title">${escapeHtml(song.song?.title||'Sem título')}</b><small class="history-artist">${escapeHtml(song.song?.artist||'WKG Play')}</small></span><span class="history-time">${ago(song.played_at)}</span></div>`).join('')};
+    const loadStation = async () => {try {const response=await fetch(`${azuraOrigin}/api/nowplaying/${stationSlug}`);if(!response.ok) throw new Error();const data=await response.json();document.querySelector('#radio-name').textContent=data.station.name;document.querySelector('#song-name').textContent=data.now_playing.song.text||'Ao vivo';audio.src=data.station.listen_url;renderHistory(data.song_history);status.innerHTML='<b>Ao vivo.</b> Dados, transmissão e histórico conectados ao AzuraCast.'} catch (_) {status.textContent='Não foi possível carregar esta estação agora.'}};
+    playButton.onclick=async()=>{if(!audio.src) await loadStation();if(audio.paused){await audio.play();playButton.textContent='❚❚'}else{audio.pause();playButton.textContent='▶'}};audio.onpause=()=>playButton.textContent='▶';audio.onplay=()=>playButton.textContent='❚❚';loadStation();
+  </script>
+</body>
 </html>
