@@ -1,0 +1,182 @@
+[
+  {
+    "route": "wkg-play-fitness",
+    "stationSlug": "wkg_play",
+    "name": "WKG Play Fitness"
+  },
+  {
+    "route": "bio-festas",
+    "stationSlug": "bio_festas",
+    "name": "Bio Festas"
+  },
+  {
+    "route": "dcasa-ibitinga",
+    "stationSlug": "dcasa_ibitinga",
+    "name": "DCasa Ibitinga"
+  },
+  {
+    "route": "damme",
+    "stationSlug": "damme",
+    "name": "Damme"
+  },
+  {
+    "route": "delifesta-campinas",
+    "stationSlug": "delifesta_campinas",
+    "name": "Delifesta Campinas"
+  },
+  {
+    "route": "delifesta-hortolandia",
+    "stationSlug": "delifesta_hortolandia",
+    "name": "Delifesta Hortolândia"
+  },
+  {
+    "route": "drogaria-tododia",
+    "stationSlug": "drogaria_tododia",
+    "name": "Drogaria Tododia"
+  },
+  {
+    "route": "lacos-de-fita",
+    "stationSlug": "lacos_de_fita",
+    "name": "Laços de Fita"
+  },
+  {
+    "route": "paulinia-winner-mall",
+    "stationSlug": "paulinia_winner_mall",
+    "name": "Paulinia Winner Mall"
+  },
+  {
+    "route": "crema-1",
+    "stationSlug": "crema_1",
+    "name": "Crema 1"
+  },
+  {
+    "route": "crema-2",
+    "stationSlug": "crema_2",
+    "name": "Crema 2"
+  },
+  {
+    "route": "crema-3",
+    "stationSlug": "crema_3",
+    "name": "Crema 3"
+  },
+  {
+    "route": "crema-4",
+    "stationSlug": "crema_4",
+    "name": "Crema 4"
+  },
+  {
+    "route": "perola",
+    "stationSlug": "perola",
+    "name": "Perola"
+  },
+  {
+    "route": "studio-my-house",
+    "stationSlug": "studio_my_house",
+    "name": "Studio My House"
+  },
+  {
+    "route": "espaco-fitness",
+    "stationSlug": "espaco_fitness",
+    "name": "Espaço Fitness"
+  },
+  {
+    "route": "r12",
+    "stationSlug": "r12",
+    "name": "R12"
+  },
+  {
+    "route": "bia-fit",
+    "stationSlug": "bia_fit",
+    "name": "Bia Fit"
+  },
+  {
+    "route": "studio-guto-lopes",
+    "stationSlug": "studio_guto_lopes",
+    "name": "Studio Guto Lópes"
+  },
+  {
+    "route": "vida-ativa",
+    "stationSlug": "vida_ativa",
+    "name": "Vida Ativa"
+  },
+  {
+    "route": "profit",
+    "stationSlug": "profit",
+    "name": "Profit"
+  },
+  {
+    "route": "live-fit",
+    "stationSlug": "live_fit",
+    "name": "Live Fit"
+  },
+  {
+    "route": "underground",
+    "stationSlug": "underground",
+    "name": "Underground"
+  },
+  {
+    "route": "ct-rodrigo-fitness",
+    "stationSlug": "ct_rodrigo_fitness",
+    "name": "CT Rodrigo Fitness"
+  },
+  {
+    "route": "house-fitness",
+    "stationSlug": "house_fitness",
+    "name": "House Fitness"
+  },
+  {
+    "route": "level-up",
+    "stationSlug": "level_up",
+    "name": "Level Up"
+  },
+  {
+    "route": "aguas-claras",
+    "stationSlug": "aguas_claras",
+    "name": "Águas Claras"
+  },
+  {
+    "route": "total-fit",
+    "stationSlug": "total_fit",
+    "name": "Total Fit"
+  },
+  {
+    "route": "jm-studio",
+    "stationSlug": "jm_studio",
+    "name": "JM Studio"
+  },
+  {
+    "route": "rihomo",
+    "stationSlug": "rihomo",
+    "name": "Rihomo"
+  },
+  {
+    "route": "vidativa",
+    "stationSlug": "vidativa",
+    "name": "Vidativa"
+  },
+  {
+    "route": "rejfitness",
+    "stationSlug": "rejfitness",
+    "name": "RejFitness"
+  },
+  {
+    "route": "stik",
+    "stationSlug": "wkg_play_fitness_-_copiar",
+    "name": "Stik"
+  },
+  {
+    "route": "romanos",
+    "stationSlug": "romanos",
+    "name": "Romanos"
+  },
+  {
+    "route": "elite-fit",
+    "stationSlug": "elite_fit",
+    "name": "Elite Fit"
+  },
+  {
+    "route": "move",
+    "stationSlug": "move",
+    "name": "Move"
+  }
+]

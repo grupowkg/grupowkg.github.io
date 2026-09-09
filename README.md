@@ -14,6 +14,10 @@ Após o DNS apontar `radio.wkgplay.com.br` para a VPS, este diretório deve ser 
 
 O código consulta `/api/nowplaying/<slug>` e usa a rota HTTPS local `/listen/<slug>/radio.mp3`. Assim, o título, capa e faixa atual são sempre da rádio correta sem conteúdo misto nem o certificado interno do AzuraCast.
 
+## Rotas automáticas
+
+As páginas por cliente são geradas a partir da lista pública de estações do AzuraCast com `node scripts/generate-station-pages.mjs`. O endereço usa o nome da estação em minúsculas e com hífens (por exemplo, `Espaço Fitness` vira `/espaco-fitness/`).
+
 ## Próxima etapa de infraestrutura
 
 Antes da publicação pública, configurar um reverse proxy na VPS que preserve o AzuraCast e sirva este player sob um subdomínio dedicado. Não substituir os containers nem tomar as portas sem um backup válido.
