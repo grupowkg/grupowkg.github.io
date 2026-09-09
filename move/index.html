@@ -1,1 +1,17 @@
-<!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=../?station=move"><script>location.replace('../?station=move')</script>
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Rádio Move | WKG Play</title>
+  </head>
+  <body>
+    <script>
+      fetch('../').then(response => response.text()).then(page => {
+        document.open();
+        document.write(page.replace('<head>', '<head><base href="/">'));
+        document.close();
+      });
+    </script>
+  </body>
+</html>
