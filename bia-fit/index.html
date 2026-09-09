@@ -19,7 +19,13 @@
           <script>
             const biaFitArt = document.querySelector('.art');
             biaFitArt.innerHTML = '<span class="cover-fallback">♫</span>';
-            document.querySelector('#status').textContent = '© ${new Date().getFullYear()} Grupo WKG. Todos os direitos reservados.';
+            const biaFitStatus = document.querySelector('#status');
+            const biaFitCopyright = '© ${new Date().getFullYear()} Grupo WKG. Todos os direitos reservados.';
+            const keepBiaFitCopyright = () => {
+              if (biaFitStatus.textContent !== biaFitCopyright) biaFitStatus.textContent = biaFitCopyright;
+            };
+            new MutationObserver(keepBiaFitCopyright).observe(biaFitStatus, { childList: true, subtree: true, characterData: true });
+            keepBiaFitCopyright();
             fetch('https://radio.wkgplay.com.br/api/nowplaying/bia_fit')
               .then(response => response.json())
               .then(data => {
