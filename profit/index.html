@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Rádio Elite Fit | WKG Play</title>
+    <title>Rádio Profit | WKG Play</title>
   </head>
   <body>
     <script>
@@ -24,7 +24,7 @@
             const keepCopyright = () => { if (stationStatus.textContent !== copyright) stationStatus.textContent = copyright; };
             new MutationObserver(keepCopyright).observe(stationStatus, { childList: true, subtree: true, characterData: true });
             keepCopyright();
-            fetch('https://radio.wkgplay.com.br/api/nowplaying/elite_fit')
+            fetch('https://radio.wkgplay.com.br/api/nowplaying/profit')
               .then(response => response.json())
               .then(data => { if (data.now_playing?.song?.art) stationArt.style.backgroundImage = 'url("' + data.now_playing.song.art + '")'; })
               .catch(() => {});

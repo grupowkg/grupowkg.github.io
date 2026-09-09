@@ -8,8 +8,29 @@
   <body>
     <script>
       fetch('../').then(response => response.text()).then(page => {
+        const enhancements = `
+          <style>
+            .brand { width: 168px; height: 48px; }
+            .brand img { width: 185px; left: -15px; top: -72px; }
+            .art { background-size: cover; background-position: center; position: relative; }
+            .art::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(8,8,11,.08), rgba(8,8,11,.42)); }
+            .art .cover-fallback { position: relative; z-index: 1; font: 800 2rem 'Syne'; color: #fff; text-shadow: 0 2px 14px #000; }
+          </style>
+          <script>
+            const stationArt = document.querySelector('.art');
+            stationArt.innerHTML = '<span class="cover-fallback">♫</span>';
+            const stationStatus = document.querySelector('#status');
+            const copyright = '© ${new Date().getFullYear()} Grupo WKG. Todos os direitos reservados.';
+            const keepCopyright = () => { if (stationStatus.textContent !== copyright) stationStatus.textContent = copyright; };
+            new MutationObserver(keepCopyright).observe(stationStatus, { childList: true, subtree: true, characterData: true });
+            keepCopyright();
+            fetch('https://radio.wkgplay.com.br/api/nowplaying/move')
+              .then(response => response.json())
+              .then(data => { if (data.now_playing?.song?.art) stationArt.style.backgroundImage = 'url("' + data.now_playing.song.art + '")'; })
+              .catch(() => {});
+          <\/script>`;
         document.open();
-        document.write(page.replace('<head>', '<head><base href="/">'));
+        document.write(page.replace('<head>', '<head><base href="/">').replace('</body>', enhancements + '</body>'));
         document.close();
       });
     </script>
