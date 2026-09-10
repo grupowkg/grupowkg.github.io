@@ -178,5 +178,10 @@
     "route": "move",
     "stationSlug": "move",
     "name": "Move"
+  },
+  {
+    "route": "ad-fintess",
+    "stationSlug": "ad_fintess",
+    "name": "AD Fintess"
   }
 ]
