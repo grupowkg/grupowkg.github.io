@@ -183,5 +183,20 @@
     "route": "ad-fintess",
     "stationSlug": "ad_fintess",
     "name": "AD Fintess"
+  },
+  {
+    "route": "olympia",
+    "stationSlug": "olympia",
+    "name": "Olympia"
+  },
+  {
+    "route": "lord",
+    "stationSlug": "lord",
+    "name": "Lord"
+  },
+  {
+    "route": "prime-fitness",
+    "stationSlug": "prime_fitness",
+    "name": "Prime Fitness"
   }
 ]
