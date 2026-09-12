@@ -198,5 +198,10 @@
     "route": "prime-fitness",
     "stationSlug": "prime_fitness",
     "name": "Prime Fitness"
+  },
+  {
+    "route": "teste-novo",
+    "stationSlug": "teste_novo",
+    "name": "Teste Novo"
   }
 ]
