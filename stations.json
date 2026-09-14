@@ -203,5 +203,15 @@
     "route": "teste-novo",
     "stationSlug": "teste_novo",
     "name": "Teste Novo"
+  },
+  {
+    "route": "on-training",
+    "stationSlug": "on_training",
+    "name": "On Training"
+  },
+  {
+    "route": "gregos-fitness",
+    "stationSlug": "gregos_fitness",
+    "name": "Gregos Fitness"
   }
 ]
