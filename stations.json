@@ -213,5 +213,10 @@
     "route": "gregos-fitness",
     "stationSlug": "gregos_fitness",
     "name": "Gregos Fitness"
+  },
+  {
+    "route": "jr-fitness",
+    "stationSlug": "jr_fitness",
+    "name": "JR Fitness"
   }
 ]
