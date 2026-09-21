@@ -223,5 +223,15 @@
     "route": "ct-eder-menezes",
     "stationSlug": "ct_eder_menezes",
     "name": "CT Éder Menezes"
+  },
+  {
+    "route": "dark-gym",
+    "stationSlug": "dark_gym",
+    "name": "Dark Gym"
+  },
+  {
+    "route": "marreiro",
+    "stationSlug": "marreiro",
+    "name": "Marreiro"
   }
 ]
