@@ -238,5 +238,15 @@
     "route": "md",
     "stationSlug": "md",
     "name": "MD"
+  },
+  {
+    "route": "fitpress",
+    "stationSlug": "fitpress",
+    "name": "Fit'Press"
+  },
+  {
+    "route": "gracie-brasil",
+    "stationSlug": "gracie_brasil",
+    "name": "Gracie Brasil"
   }
 ]
