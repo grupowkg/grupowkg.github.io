@@ -233,5 +233,10 @@
     "route": "marreiro",
     "stationSlug": "marreiro",
     "name": "Marreiro"
+  },
+  {
+    "route": "md",
+    "stationSlug": "md",
+    "name": "MD"
   }
 ]
