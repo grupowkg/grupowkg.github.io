@@ -248,5 +248,30 @@
     "route": "gracie-brasil",
     "stationSlug": "gracie_brasil",
     "name": "Gracie Brasil"
+  },
+  {
+    "route": "corpo-perfeito",
+    "stationSlug": "corpo_perfeito",
+    "name": "Corpo Perfeito"
+  },
+  {
+    "route": "gui-guedes",
+    "stationSlug": "gui_guedes",
+    "name": "Gui Guedes"
+  },
+  {
+    "route": "elite",
+    "stationSlug": "elite",
+    "name": "Elite"
+  },
+  {
+    "route": "movimento",
+    "stationSlug": "movimento",
+    "name": "Movimento"
+  },
+  {
+    "route": "exclusive",
+    "stationSlug": "exclusive",
+    "name": "Exclusive"
   }
 ]
