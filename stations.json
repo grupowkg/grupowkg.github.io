@@ -283,5 +283,10 @@
     "route": "live-fit-gravatai",
     "stationSlug": "live_fit_gravataí",
     "name": "Live Fit Gravataí"
+  },
+  {
+    "route": "khiper",
+    "stationSlug": "khiper_",
+    "name": "Khiper"
   }
 ]
