@@ -288,5 +288,10 @@
     "route": "khiper",
     "stationSlug": "khiper",
     "name": "Khiper"
+  },
+  {
+    "route": "studio-fitness",
+    "stationSlug": "studio_fitness",
+    "name": "Studio Fitness"
   }
 ]
