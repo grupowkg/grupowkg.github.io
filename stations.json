@@ -303,5 +303,10 @@
     "route": "mais",
     "stationSlug": "mais",
     "name": "Mais"
+  },
+  {
+    "route": "lets-go",
+    "stationSlug": "lets_go_",
+    "name": "Lets Go"
   }
 ]
