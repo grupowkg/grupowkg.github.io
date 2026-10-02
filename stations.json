@@ -293,5 +293,10 @@
     "route": "studio-fitness",
     "stationSlug": "studio_fitness",
     "name": "Studio Fitness"
+  },
+  {
+    "route": "ct-ruy-bouchardet",
+    "stationSlug": "ct_ruy_bouchardet",
+    "name": "CT Ruy Bouchardet"
   }
 ]
