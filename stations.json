@@ -308,5 +308,10 @@
     "route": "lets-go",
     "stationSlug": "lets_go_",
     "name": "Lets Go"
+  },
+  {
+    "route": "lets-prime",
+    "stationSlug": "lets_prime",
+    "name": "Lets Prime"
   }
 ]
