@@ -313,5 +313,10 @@
     "route": "lets-prime",
     "stationSlug": "lets_prime",
     "name": "Lets Prime"
+  },
+  {
+    "route": "linear-fitness",
+    "stationSlug": "linear_fitness",
+    "name": "Linear Fitness"
   }
 ]
