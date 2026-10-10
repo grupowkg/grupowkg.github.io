@@ -22,8 +22,30 @@
     const escapeHtml = value => String(value || '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[char]));
     const ago = timestamp => {const seconds=Math.max(0,Math.round(Date.now()/1000-timestamp));return seconds<60?'agora':seconds<3600?`há ${Math.floor(seconds/60)} min`:`há ${Math.floor(seconds/3600)} h`};
     const renderHistory = songs => {history.innerHTML=(songs||[]).slice(0,4).map(song=>`<div class="history-item"><span class="history-icon">♫</span><span><b class="history-title">${escapeHtml(song.song?.title||'Sem título')}</b><small class="history-artist">${escapeHtml(song.song?.artist||'WKG Play')}</small></span><span class="history-time">${ago(song.played_at)}</span></div>`).join('')};
-    const copyright='© '+new Date().getFullYear()+' Grupo WKG. Todos os direitos reservados.';const loadStation = async () => {try {const response=await fetch(`${azuraOrigin}/api/nowplaying/${stationSlug}`);if(!response.ok) throw new Error();const data=await response.json();document.querySelector('#radio-name').textContent=data.station.name;document.querySelector('#song-name').textContent=data.now_playing.song.text||'Ao vivo';audio.src=data.station.listen_url;renderHistory(data.song_history);status.textContent=copyright} catch (_) {status.textContent=copyright}};
-    playButton.onclick=async()=>{if(!audio.src) await loadStation();if(audio.paused){await audio.play();playButton.textContent='❚❚'}else{audio.pause();playButton.textContent='▶'}};audio.onpause=()=>playButton.textContent='▶';audio.onplay=()=>playButton.textContent='❚❚';loadStation();
+    const copyright='© '+new Date().getFullYear()+' Grupo WKG. Todos os direitos reservados.';
+    let wantsPlayback=false,manualPause=false,reconnectTimer=null,bufferTimer=null,reconnectAttempt=0,recovering=false,lastStreamUrl='';
+    const clearBufferTimer=()=>{if(bufferTimer){clearTimeout(bufferTimer);bufferTimer=null}};
+    const clearReconnectTimer=()=>{if(reconnectTimer){clearTimeout(reconnectTimer);reconnectTimer=null}};
+    const updateButton=playing=>{playButton.textContent=playing?'❚❚':'▶';playButton.setAttribute('aria-label',playing?'Pausar rádio':'Tocar rádio')};
+    const isActive=()=>!audio.paused&&!audio.ended&&audio.readyState>2;
+    const updateStation=async({replaceStream=false}={})=>{try{const response=await fetch(`${azuraOrigin}/api/nowplaying/${stationSlug}`,{cache:'no-store'});if(!response.ok) throw new Error('now-playing');const data=await response.json(),streamUrl=data?.station?.listen_url||'';document.querySelector('#radio-name').textContent=data?.station?.name||'WKG Play';document.querySelector('#song-name').textContent=data?.now_playing?.song?.text||'Ao vivo';renderHistory(data?.song_history);status.textContent=copyright;if(streamUrl&&(replaceStream||!audio.src)){lastStreamUrl=streamUrl;audio.src=streamUrl}return streamUrl}catch(_){status.textContent=copyright;return ''}};
+    const startBufferGrace=()=>{clearBufferTimer();if(!wantsPlayback||manualPause||isActive()) return;bufferTimer=setTimeout(()=>scheduleReconnect(),12000)};
+    const scheduleReconnect=()=>{if(!wantsPlayback||manualPause||reconnectTimer||recovering||navigator.onLine===false) return;clearBufferTimer();const delay=Math.min(30000,2000*2**reconnectAttempt);reconnectAttempt=Math.min(reconnectAttempt+1,4);reconnectTimer=setTimeout(()=>{reconnectTimer=null;recoverStream()},delay)};
+    const recoverStream=async()=>{if(!wantsPlayback||manualPause||recovering||navigator.onLine===false) return;recovering=true;try{const streamUrl=await updateStation({replaceStream:true});const target=streamUrl||lastStreamUrl||audio.currentSrc||audio.src;if(!target) throw new Error('stream');if(audio.src!==target) audio.src=target;audio.load();await audio.play()}catch(_){scheduleReconnect()}finally{recovering=false}};
+    const startPlayback=async()=>{wantsPlayback=true;manualPause=false;clearReconnectTimer();try{if(!audio.src) await updateStation({replaceStream:true});if(!audio.src) throw new Error('stream');await audio.play()}catch(_){scheduleReconnect()}};
+    const pausePlayback=()=>{wantsPlayback=false;manualPause=true;clearReconnectTimer();clearBufferTimer();audio.pause()};
+    playButton.onclick=()=>audio.paused?startPlayback():pausePlayback();
+    audio.addEventListener('playing',()=>{reconnectAttempt=0;clearReconnectTimer();clearBufferTimer();updateButton(true)});
+    audio.addEventListener('pause',()=>{updateButton(false);if(wantsPlayback&&!manualPause&&!audio.ended) scheduleReconnect()});
+    audio.addEventListener('error',scheduleReconnect);
+    audio.addEventListener('ended',scheduleReconnect);
+    audio.addEventListener('waiting',startBufferGrace);
+    audio.addEventListener('stalled',startBufferGrace);
+    audio.addEventListener('progress',clearBufferTimer);
+    audio.addEventListener('timeupdate',clearBufferTimer);
+    window.addEventListener('offline',()=>{clearReconnectTimer();clearBufferTimer()});
+    window.addEventListener('online',()=>{if(wantsPlayback&&!manualPause&&!isActive()) scheduleReconnect()});
+    updateStation({replaceStream:true});
   </script>
 </body>
 </html>
