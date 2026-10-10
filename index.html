@@ -15,7 +15,7 @@
   <script>
     const queryStation = new URLSearchParams(location.search).get('station');
     const clientKey = queryStation || location.pathname.split('/').filter(Boolean).at(-1) || 'wkg-play';
-    const stationMap = {'wkg-play':'wkg_play','bia-fit':'bia_fit'};
+    const stationMap = {'wkg-play':'wkg_play','bia-fit':'bia_fit','corpo-e-mente-play':'corpoemente_play'};
     const stationSlug = stationMap[clientKey] || clientKey.replace(/-/g,'_');
     const azuraOrigin = 'https://radio.wkgplay.com.br';
     const audio = new Audio(), playButton = document.querySelector('#play'), history = document.querySelector('#history'), status = document.querySelector('#status');
