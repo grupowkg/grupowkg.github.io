@@ -18,6 +18,16 @@
     const stationMap = {'wkg-play':'wkg_play','bia-fit':'bia_fit'};
     const stationSlug = stationMap[clientKey] || clientKey.replace(/-/g,'_');
     const azuraOrigin = 'https://radio.wkgplay.com.br';
+    const veroneClients = new Set([
+      'ad-fintess',
+      'corpo-perfeito',
+      'level-up',
+      'total-fit',
+      'underground'
+    ]);
+    const selectedAzuraOrigin = veroneClients.has(clientKey)
+      ? 'https://radios.wkgplay.com.br'
+      : azuraOrigin;
     const audio = new Audio(), playButton = document.querySelector('#play'), history = document.querySelector('#history'), status = document.querySelector('#status');
     const escapeHtml = value => String(value || '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[char]));
     const ago = timestamp => {const seconds=Math.max(0,Math.round(Date.now()/1000-timestamp));return seconds<60?'agora':seconds<3600?`há ${Math.floor(seconds/60)} min`:`há ${Math.floor(seconds/3600)} h`};
@@ -28,7 +38,7 @@
     const clearReconnectTimer=()=>{if(reconnectTimer){clearTimeout(reconnectTimer);reconnectTimer=null}};
     const updateButton=playing=>{playButton.textContent=playing?'❚❚':'▶';playButton.setAttribute('aria-label',playing?'Pausar rádio':'Tocar rádio')};
     const isActive=()=>!audio.paused&&!audio.ended&&audio.readyState>2;
-    const updateStation=async({replaceStream=false}={})=>{try{const response=await fetch(`${azuraOrigin}/api/nowplaying/${stationSlug}`,{cache:'no-store'});if(!response.ok) throw new Error('now-playing');const data=await response.json(),streamUrl=data?.station?.listen_url||'';document.querySelector('#radio-name').textContent=data?.station?.name||'WKG Play';document.querySelector('#song-name').textContent=data?.now_playing?.song?.text||'Ao vivo';renderHistory(data?.song_history);status.textContent=copyright;if(streamUrl&&(replaceStream||!audio.src)){lastStreamUrl=streamUrl;audio.src=streamUrl}return streamUrl}catch(_){status.textContent=copyright;return ''}};
+    const updateStation=async({replaceStream=false}={})=>{try{const response=await fetch(`${selectedAzuraOrigin}/api/nowplaying/${stationSlug}`,{cache:'no-store'});if(!response.ok) throw new Error('now-playing');const data=await response.json(),streamUrl=data?.station?.listen_url||'';document.querySelector('#radio-name').textContent=data?.station?.name||'WKG Play';document.querySelector('#song-name').textContent=data?.now_playing?.song?.text||'Ao vivo';renderHistory(data?.song_history);status.textContent=copyright;if(streamUrl&&(replaceStream||!audio.src)){lastStreamUrl=streamUrl;audio.src=streamUrl}return streamUrl}catch(_){status.textContent=copyright;return ''}};
     const startBufferGrace=()=>{clearBufferTimer();if(!wantsPlayback||manualPause||isActive()) return;bufferTimer=setTimeout(()=>scheduleReconnect(),12000)};
     const scheduleReconnect=()=>{if(!wantsPlayback||manualPause||reconnectTimer||recovering||navigator.onLine===false) return;clearBufferTimer();const delay=Math.min(30000,2000*2**reconnectAttempt);reconnectAttempt=Math.min(reconnectAttempt+1,4);reconnectTimer=setTimeout(()=>{reconnectTimer=null;recoverStream()},delay)};
     const recoverStream=async()=>{if(!wantsPlayback||manualPause||recovering||navigator.onLine===false) return;recovering=true;try{const streamUrl=await updateStation({replaceStream:true});const target=streamUrl||lastStreamUrl||audio.currentSrc||audio.src;if(!target) throw new Error('stream');if(audio.src!==target) audio.src=target;audio.load();await audio.play()}catch(_){scheduleReconnect()}finally{recovering=false}};
