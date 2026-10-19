@@ -18,8 +18,7 @@
           '<\/script>';
         document.open();
         const veronePage = page.replace("const azuraOrigin = 'https://radio.wkgplay.com.br';", "const azuraOrigin = '" + azuraOrigin + "';");
-        const pilotPage = veronePage.replace('catch(_){scheduleReconnect()}finally{recovering=false}', 'catch(_){setTimeout(scheduleReconnect,0)}finally{recovering=false}');
-        document.write(pilotPage.replace('<head>', '<head><base href="/">').replace('</body>', enhancements + '</body>'));
+        document.write(veronePage.replace('<head>', '<head><base href="/">').replace('</body>', enhancements + '</body>'));
         document.close();
       });
     </script>
