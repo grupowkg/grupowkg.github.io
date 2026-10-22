@@ -15,7 +15,11 @@
   <script>
     const queryStation = new URLSearchParams(location.search).get('station');
     const clientKey = queryStation || location.pathname.split('/').filter(Boolean).at(-1) || 'wkg-play';
-    const stationMap = {'wkg-play':'wkg_play','bia-fit':'bia_fit'};
+    const stationMap = {
+      'wkg-play':'wkg_play',
+      'bia-fit':'bia_fit',
+      'placidio-team-jiu-jitsu':'placidio_team_jiu-jitsu'
+    };
     const stationSlug = stationMap[clientKey] || clientKey.replace(/-/g,'_');
     const azuraOrigin = 'https://radio.wkgplay.com.br';
     const veroneClients = new Set([
@@ -36,6 +40,8 @@
       'iron-skull',
       'jdb-led',
       'supermercado-ipiranga'
+      ,'atittude'
+      ,'placidio-team-jiu-jitsu'
     ]);
     const selectedAzuraOrigin = veroneClients.has(clientKey)
       ? 'https://radios.wkgplay.com.br'
