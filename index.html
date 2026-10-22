@@ -13,14 +13,15 @@
 <body>
   <main class="shell"><header class="top"><span class="brand"><img src="./wkg-play-logo.jpg" alt="WKG Play"></span><div class="badge"><i></i>Ao vivo</div></header><section class="layout"><article class="main"><p class="eyebrow">NOVOS SENTIDOS PARA SEU NEGÓCIO</p><h1>Uma rádio que <em>toca</em> sua marca.</h1><p class="copy">Música, chamadas, anúncios e muito mais. Tudo em uma experiência de áudio com a identidade da sua empresa.</p><div class="player"><div class="art"><b>WKG</b></div><div class="meta"><small>TOCANDO AGORA</small><strong id="radio-name">Carregando rádio…</strong><p id="song-name">Conectando</p></div><button class="button" id="play" aria-label="Tocar rádio">▶</button><div class="timeline"><span>AO VIVO</span><div class="bar"><span></span></div><span>WKG PLAY</span></div></div></article><aside class="side"><h2>Histórico da rádio</h2><p>As últimas músicas reproduzidas na sua programação.</p><div class="history" id="history"></div><div class="live-state"><span class="live-icon"><span class="sound" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></span></span><span>Ao vivo</span></div></aside></section><p class="note" id="status">© 2026 Grupo WKG. Todos os direitos reservados.</p></main>
   <script>
+    const explicitPlayerConfig = window.__WKG_PLAYER_CONFIG || {};
     const queryStation = new URLSearchParams(location.search).get('station');
-    const clientKey = queryStation || location.pathname.split('/').filter(Boolean).at(-1) || 'wkg-play';
+    const clientKey = explicitPlayerConfig.clientKey || queryStation || location.pathname.split('/').filter(Boolean).at(-1) || 'wkg-play';
     const stationMap = {
       'wkg-play':'wkg_play',
       'bia-fit':'bia_fit',
       'placidio-team-jiu-jitsu':'placidio_team_jiu-jitsu'
     };
-    const stationSlug = stationMap[clientKey] || clientKey.replace(/-/g,'_');
+    const stationSlug = explicitPlayerConfig.stationSlug || stationMap[clientKey] || clientKey.replace(/-/g,'_');
     const azuraOrigin = 'https://radio.wkgplay.com.br';
     const veroneClients = new Set([
       'ad-fintess',
@@ -43,9 +44,9 @@
       ,'atittude'
       ,'placidio-team-jiu-jitsu'
     ]);
-    const selectedAzuraOrigin = veroneClients.has(clientKey)
+    const selectedAzuraOrigin = explicitPlayerConfig.origin || (veroneClients.has(clientKey)
       ? 'https://radios.wkgplay.com.br'
-      : azuraOrigin;
+      : azuraOrigin);
     const audio = new Audio(), playButton = document.querySelector('#play'), history = document.querySelector('#history'), status = document.querySelector('#status');
     const escapeHtml = value => String(value || '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[char]));
     const ago = timestamp => {const seconds=Math.max(0,Math.round(Date.now()/1000-timestamp));return seconds<60?'agora':seconds<3600?`há ${Math.floor(seconds/60)} min`:`há ${Math.floor(seconds/3600)} h`};
