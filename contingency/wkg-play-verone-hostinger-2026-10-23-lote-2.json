@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "status": "temporary_contingency_active",
   "created_at": "2026-10-23",
   "scope": "WKG Play player fallback only; no AzuraCast, DNS, playlist, media, or infrastructure changes.",
@@ -47,11 +47,20 @@
       "restore_source_commit": "5bf855f"
     }
   ],
+  "lote_3": [
+    {"route":"endurance","public_url":"https://player.wkgplay.com.br/endurance/","original":{"origin":"https://radios.wkgplay.com.br","shortcode":"endurance"},"temporary_status":"active","temporary_source":"wkg_play_fitness","restore_source_commit":"9bf9ee3"},
+    {"route":"fit-life","public_url":"https://player.wkgplay.com.br/fit-life/","original":{"origin":"https://radios.wkgplay.com.br","shortcode":"fit_life"},"temporary_status":"active","temporary_source":"wkg_play_fitness","restore_source_commit":"9bf9ee3"},
+    {"route":"greyce-clinica-de-performance","public_url":"https://player.wkgplay.com.br/greyce-clinica-de-performance/","original":{"origin":"https://radios.wkgplay.com.br","shortcode":"greyce_clinica_de_performance"},"temporary_status":"active","temporary_source":"wkg_play_fitness","restore_source_commit":"9bf9ee3"},
+    {"route":"iron-skull","public_url":"https://player.wkgplay.com.br/iron-skull/","original":{"origin":"https://radios.wkgplay.com.br","shortcode":"iron_skull"},"temporary_status":"active","temporary_source":"wkg_play_fitness","restore_source_commit":"9bf9ee3"},
+    {"route":"jdb-led","public_url":"https://player.wkgplay.com.br/jdb-led/","original":{"origin":"https://radios.wkgplay.com.br","shortcode":"jdb_led"},"temporary_status":"active","temporary_source":"wkg_play_fitness","restore_source_commit":"9bf9ee3"}
+  ],
   "reversion": {
     "authorization_required": true,
     "condition": "Validate each original Verone transmission before restoration.",
-    "individual": "git restore --source=5bf855f -- <route>/index.html",
-    "lote_2": "git revert <lote_2_commit>",
+    "individual_lote_2": "git restore --source=5bf855f -- <route>/index.html",
+    "individual_lote_3": "git restore --source=9bf9ee3 -- <route>/index.html",
+    "lote_2": "git revert 9bf9ee3",
+    "lote_3": "git revert <lote_3_commit>",
     "pilot_ad_fintess": "git restore --source=b70306c -- ad-fintess/index.html"
   }
 }
