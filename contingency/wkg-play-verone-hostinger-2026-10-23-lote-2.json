@@ -28,7 +28,10 @@
       "original": {"origin": "https://radios.wkgplay.com.br", "shortcode": "alves"},
       "temporary_status": "active",
       "temporary_source": "wkg_play_fitness",
-      "restore_source_commit": "5bf855f"
+      "restore_source_commit": "5bf855f",
+      "restoration_status": "validated",
+      "restoration_commit": "be4fa39",
+      "restoration_validated_at": "2026-10-23"
     },
     {
       "route": "atittude",
@@ -36,7 +39,10 @@
       "original": {"origin": "https://radios.wkgplay.com.br", "shortcode": "atittude"},
       "temporary_status": "active",
       "temporary_source": "wkg_play_fitness",
-      "restore_source_commit": "5bf855f"
+      "restore_source_commit": "5bf855f",
+      "restoration_status": "validated",
+      "restoration_commit": "be4fa39",
+      "restoration_validated_at": "2026-10-23"
     },
     {
       "route": "corpo-perfeito",
@@ -44,12 +50,15 @@
       "original": {"origin": "https://radios.wkgplay.com.br", "shortcode": "corpo_perfeito"},
       "temporary_status": "active",
       "temporary_source": "wkg_play_fitness",
-      "restore_source_commit": "5bf855f"
+      "restore_source_commit": "5bf855f",
+      "restoration_status": "validated",
+      "restoration_commit": "be4fa39",
+      "restoration_validated_at": "2026-10-23"
     }
   ],
   "lote_3": [
-    {"route":"endurance","public_url":"https://player.wkgplay.com.br/endurance/","original":{"origin":"https://radios.wkgplay.com.br","shortcode":"endurance"},"temporary_status":"active","temporary_source":"wkg_play_fitness","restore_source_commit":"9bf9ee3"},
-    {"route":"fit-life","public_url":"https://player.wkgplay.com.br/fit-life/","original":{"origin":"https://radios.wkgplay.com.br","shortcode":"fit_life"},"temporary_status":"active","temporary_source":"wkg_play_fitness","restore_source_commit":"9bf9ee3"},
+    {"route":"endurance","public_url":"https://player.wkgplay.com.br/endurance/","original":{"origin":"https://radios.wkgplay.com.br","shortcode":"endurance"},"temporary_status":"active","temporary_source":"wkg_play_fitness","restore_source_commit":"9bf9ee3","restoration_status":"validated","restoration_commit":"be4fa39","restoration_validated_at":"2026-10-23"},
+    {"route":"fit-life","public_url":"https://player.wkgplay.com.br/fit-life/","original":{"origin":"https://radios.wkgplay.com.br","shortcode":"fit_life"},"temporary_status":"active","temporary_source":"wkg_play_fitness","restore_source_commit":"9bf9ee3","restoration_status":"validated","restoration_commit":"be4fa39","restoration_validated_at":"2026-10-23"},
     {"route":"greyce-clinica-de-performance","public_url":"https://player.wkgplay.com.br/greyce-clinica-de-performance/","original":{"origin":"https://radios.wkgplay.com.br","shortcode":"greyce_clinica_de_performance"},"temporary_status":"active","temporary_source":"wkg_play_fitness","restore_source_commit":"9bf9ee3"},
     {"route":"iron-skull","public_url":"https://player.wkgplay.com.br/iron-skull/","original":{"origin":"https://radios.wkgplay.com.br","shortcode":"iron_skull"},"temporary_status":"active","temporary_source":"wkg_play_fitness","restore_source_commit":"9bf9ee3"},
     {"route":"jdb-led","public_url":"https://player.wkgplay.com.br/jdb-led/","original":{"origin":"https://radios.wkgplay.com.br","shortcode":"jdb_led"},"temporary_status":"active","temporary_source":"wkg_play_fitness","restore_source_commit":"9bf9ee3"}
