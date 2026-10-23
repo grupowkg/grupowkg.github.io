@@ -1,0 +1,1079 @@
+{
+  "schema_version": 1,
+  "kind": "wkg_play_general_hostinger_contingency",
+  "created_at": "2026-10-23",
+  "scope": "Player wrappers only; no core, AzuraCast, DNS, playlist, media, service, or infrastructure changes.",
+  "inventory": {
+    "published_player_routes": 97,
+    "non_player_routes": [
+      {
+        "route": "cadastro",
+        "reason": "external registration form"
+      },
+      {
+        "route": "corpo-livre",
+        "reason": "redirect alias to /corpolivre/"
+      }
+    ],
+    "protected_hostinger_routes": [
+      "bio-festas",
+      "crema-1",
+      "crema-2",
+      "crema-3",
+      "crema-4",
+      "damme",
+      "dcasa-ibitinga",
+      "delifesta-campinas",
+      "delifesta-hortolandia",
+      "lacos-de-fita",
+      "paulinia-winner-mall",
+      "perola"
+    ],
+    "recovered_before_general": [
+      "ad-fintess",
+      "alves",
+      "atittude",
+      "corpo-perfeito",
+      "endurance",
+      "fit-life",
+      "greyce-clinica-de-performance",
+      "iron-skull",
+      "jdb-led"
+    ]
+  },
+  "temporary_source": {
+    "origin": "https://radio.wkgplay.com.br",
+    "station_name": "WKG Play Fitness",
+    "shortcode": "wkg_play_fitness",
+    "listen_url": "https://radio.wkgplay.com.br/listen/wkg_play_fitness/radio.mp3"
+  },
+  "entries": [
+    {
+      "route": "ad-fintess",
+      "public_url": "https://player.wkgplay.com.br/ad-fintess/",
+      "original": {
+        "origin": "https://radios.wkgplay.com.br",
+        "shortcode": "ad_fintess",
+        "source_commit": "b70306c"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "active",
+      "activation_commit": "5bf855f"
+    },
+    {
+      "route": "alves",
+      "public_url": "https://player.wkgplay.com.br/alves/",
+      "original": {
+        "origin": "https://radios.wkgplay.com.br",
+        "shortcode": "alves",
+        "source_commit": "5bf855f"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "active",
+      "activation_commit": "9bf9ee3"
+    },
+    {
+      "route": "atittude",
+      "public_url": "https://player.wkgplay.com.br/atittude/",
+      "original": {
+        "origin": "https://radios.wkgplay.com.br",
+        "shortcode": "atittude",
+        "source_commit": "5bf855f"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "active",
+      "activation_commit": "9bf9ee3"
+    },
+    {
+      "route": "corpo-perfeito",
+      "public_url": "https://player.wkgplay.com.br/corpo-perfeito/",
+      "original": {
+        "origin": "https://radios.wkgplay.com.br",
+        "shortcode": "corpo_perfeito",
+        "source_commit": "5bf855f"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "active",
+      "activation_commit": "9bf9ee3"
+    },
+    {
+      "route": "endurance",
+      "public_url": "https://player.wkgplay.com.br/endurance/",
+      "original": {
+        "origin": "https://radios.wkgplay.com.br",
+        "shortcode": "endurance",
+        "source_commit": "9bf9ee3"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "active",
+      "activation_commit": "389098c"
+    },
+    {
+      "route": "fit-life",
+      "public_url": "https://player.wkgplay.com.br/fit-life/",
+      "original": {
+        "origin": "https://radios.wkgplay.com.br",
+        "shortcode": "fit_life",
+        "source_commit": "9bf9ee3"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "active",
+      "activation_commit": "389098c"
+    },
+    {
+      "route": "greyce-clinica-de-performance",
+      "public_url": "https://player.wkgplay.com.br/greyce-clinica-de-performance/",
+      "original": {
+        "origin": "https://radios.wkgplay.com.br",
+        "shortcode": "greyce_clinica_de_performance",
+        "source_commit": "9bf9ee3"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "active",
+      "activation_commit": "389098c"
+    },
+    {
+      "route": "iron-skull",
+      "public_url": "https://player.wkgplay.com.br/iron-skull/",
+      "original": {
+        "origin": "https://radios.wkgplay.com.br",
+        "shortcode": "iron_skull",
+        "source_commit": "9bf9ee3"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "active",
+      "activation_commit": "389098c"
+    },
+    {
+      "route": "jdb-led",
+      "public_url": "https://player.wkgplay.com.br/jdb-led/",
+      "original": {
+        "origin": "https://radios.wkgplay.com.br",
+        "shortcode": "jdb_led",
+        "source_commit": "9bf9ee3"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "active",
+      "activation_commit": "389098c"
+    },
+    {
+      "route": "aguas-claras",
+      "public_url": "https://player.wkgplay.com.br/aguas-claras/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "aguas_claras",
+        "source_commit": "389098c",
+        "sha256": "2306ec2f69eb048ee55e3cf36df4162fceaedd7ffb03038657ad3ecab52e21f2"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "bia-fit",
+      "public_url": "https://player.wkgplay.com.br/bia-fit/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "bia_fit",
+        "source_commit": "389098c",
+        "sha256": "8a51b546c8d76b66b5dcbcc683bae1ca7f057903668f91739711bd95da103f7e"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "cfipa",
+      "public_url": "https://player.wkgplay.com.br/cfipa/",
+      "original": {
+        "origin": "https://radios.wkgplay.com.br",
+        "shortcode": "cfipa",
+        "source_commit": "389098c",
+        "sha256": "00f9d3fc5ccbf4ead9b59b843daf33d449de9cae6e18aed504c0f32756f67951"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "chico-espeto",
+      "public_url": "https://player.wkgplay.com.br/chico-espeto/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "chico_espeto",
+        "source_commit": "389098c",
+        "sha256": "cab40b8ebedc21ee2ce0b6847e4c4cf449c70293ed4aca0c4165075cba8bbe36"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "corpoemente_play",
+      "public_url": "https://player.wkgplay.com.br/corpoemente_play/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "corpoemente_play",
+        "source_commit": "389098c",
+        "sha256": "be5cabc2aa735fd8d5dbb7ec545415a8d116fe6881412f6cb3ec5de78f069395"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "corpolivre",
+      "public_url": "https://player.wkgplay.com.br/corpolivre/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "corpolivre",
+        "source_commit": "389098c",
+        "sha256": "b772dadca4c6e94bd40c0faa9ec9880eaf35d3129a43270f944f045019a0717f"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "cross-fc",
+      "public_url": "https://player.wkgplay.com.br/cross-fc/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "cross_fc",
+        "source_commit": "389098c",
+        "sha256": "6a7c95b0fb00747317d8659bc09801dfea5d5fbe9f20d225287cde692061015d"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "ct-eder-menezes",
+      "public_url": "https://player.wkgplay.com.br/ct-eder-menezes/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "ct_eder_menezes",
+        "source_commit": "389098c",
+        "sha256": "9679ee96afb7011d23eb1e59b0d9076d755044c31c0c1af913cbab4d5a7ce6f4"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "ct-rodrigo-fitness",
+      "public_url": "https://player.wkgplay.com.br/ct-rodrigo-fitness/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "ct_rodrigo_fitness",
+        "source_commit": "389098c",
+        "sha256": "8d53906b2c62bdb5add66af56034cc27d73a73350c22f7ad00333494d47b2b2f"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "ct-ruy-bouchardet",
+      "public_url": "https://player.wkgplay.com.br/ct-ruy-bouchardet/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "ct_ruy_bouchardet",
+        "source_commit": "389098c",
+        "sha256": "21489702bc45416f9bd140d34e41f839230ddd5cab3079f33c97a7d34361118f"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "dark-gym",
+      "public_url": "https://player.wkgplay.com.br/dark-gym/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "dark_gym",
+        "source_commit": "389098c",
+        "sha256": "a48665c8345a0ebba8383e54b725a9b97b160577b63f4e34943ce2fdf106aebd"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "drogaria-tododia",
+      "public_url": "https://player.wkgplay.com.br/drogaria-tododia/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "drogaria_tododia",
+        "source_commit": "389098c",
+        "sha256": "811730edf846816d15fc68ef291c526989adf58cd3cc9ff085c97c8ea6039db6"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "elite",
+      "public_url": "https://player.wkgplay.com.br/elite/",
+      "original": {
+        "origin": "https://radios.wkgplay.com.br",
+        "shortcode": "elite",
+        "source_commit": "389098c",
+        "sha256": "2f11e4c34821e8c0bfc3e522927a9ef3d47fb3fb234d5b6d145df08f481e5572"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "elite-fit",
+      "public_url": "https://player.wkgplay.com.br/elite-fit/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "elite_fit",
+        "source_commit": "389098c",
+        "sha256": "3d00c553d5a6dcab963f77ef40d8ea91c21466bc4e716a5c0ce4950f26e9b6ee"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "espaco-fitness",
+      "public_url": "https://player.wkgplay.com.br/espaco-fitness/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "espaco_fitness",
+        "source_commit": "389098c",
+        "sha256": "e4874a387b370dd60b61bb062edbbf5daeb14b2238f46f4419c795d71086dd8d"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "exclusive",
+      "public_url": "https://player.wkgplay.com.br/exclusive/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "exclusive",
+        "source_commit": "389098c",
+        "sha256": "b3668259c9711c4a59e6a983ba5cdffb702957aa5f25c99ae8dcefeab3449cb1"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "fitpress",
+      "public_url": "https://player.wkgplay.com.br/fitpress/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "fitpress",
+        "source_commit": "389098c",
+        "sha256": "95fdf4a537da1b5aaafc79c78adfca9e14a2ef3a4ec6f4511c422a793819371e"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "gracie-brasil",
+      "public_url": "https://player.wkgplay.com.br/gracie-brasil/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "gracie_brasil",
+        "source_commit": "389098c",
+        "sha256": "81f35f286568b8c047cd1eb8285b307222b976a01ad79136b29cbcc06db2aeae"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "gregos-fitness",
+      "public_url": "https://player.wkgplay.com.br/gregos-fitness/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "gregos_fitness",
+        "source_commit": "389098c",
+        "sha256": "cc0bf4c15f744d4f88589e91f8a7c938b1e3b74b1bda08a260e5679fc8e412ff"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "gui-guedes",
+      "public_url": "https://player.wkgplay.com.br/gui-guedes/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "gui_guedes",
+        "source_commit": "389098c",
+        "sha256": "2bd67df966e171047532d92090b452954d8e20c5d7203709e0588ef064a1631d"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "house-fitness",
+      "public_url": "https://player.wkgplay.com.br/house-fitness/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "house_fitness",
+        "source_commit": "389098c",
+        "sha256": "cdba9eb4d076cfff3911a5219d0635d37c9d0332f9c5496bc520d0f54217b69d"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "impactus",
+      "public_url": "https://player.wkgplay.com.br/impactus/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "impactus",
+        "source_commit": "389098c",
+        "sha256": "c5f057b5cf436b8bdfe4ff731ebdde506719bd460b678dcb75b0d8d719f9e971"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "iron-fit",
+      "public_url": "https://player.wkgplay.com.br/iron-fit/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "iron_fit",
+        "source_commit": "389098c",
+        "sha256": "a28f371a7e88f7fb211bb5fdfa4d79e152566d9df063e75a6922d97b63cd8999"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "ironfitness",
+      "public_url": "https://player.wkgplay.com.br/ironfitness/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "ironfitness",
+        "source_commit": "389098c",
+        "sha256": "eb3c45ca88c153f1c53393b0b906fffbb5453c58e5d3e974f58ac5edd6d3d2ce"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "jm-studio",
+      "public_url": "https://player.wkgplay.com.br/jm-studio/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "jm_studio",
+        "source_commit": "389098c",
+        "sha256": "db2aaa68d8b97a1424df0f31d6dfa54900a05420a69f43d9f0b3c113b3204680"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "jr-fitness",
+      "public_url": "https://player.wkgplay.com.br/jr-fitness/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "jr_fitness",
+        "source_commit": "389098c",
+        "sha256": "34bb0817651255c1a6c73b07905e2a0a91f600c4a9a68e847862fad4441f095b"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "khiper",
+      "public_url": "https://player.wkgplay.com.br/khiper/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "khiper",
+        "source_commit": "389098c",
+        "sha256": "9a321def320a1013585d94f6deec508cc754a871f36cbe22a5ce26478d769aa2"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "lets-go",
+      "public_url": "https://player.wkgplay.com.br/lets-go/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "lets_go_",
+        "source_commit": "389098c",
+        "sha256": "7663a852a2184f817f696854e7a301f51190e9db95126599766afc82cbbb89b0"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "lets-prime",
+      "public_url": "https://player.wkgplay.com.br/lets-prime/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "lets_prime",
+        "source_commit": "389098c",
+        "sha256": "c5347d62b4fadc36a883459614ead44108a9a4a31c316aaf40d63e9cea710dc5"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "level-up",
+      "public_url": "https://player.wkgplay.com.br/level-up/",
+      "original": {
+        "origin": "https://radios.wkgplay.com.br",
+        "shortcode": "level_up",
+        "source_commit": "389098c",
+        "sha256": "290268409f3f3d6afb1326bc01a400526fc8aa10c17bbb7904280554b002b924"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "lf-espaco-fitness",
+      "public_url": "https://player.wkgplay.com.br/lf-espaco-fitness/",
+      "original": {
+        "origin": "https://radios.wkgplay.com.br",
+        "shortcode": "lf_espaço_fitness",
+        "source_commit": "389098c",
+        "sha256": "293d472bdc0e4a1cae9e55213b655e4bd5999df52888c4f72c6b020d14e51a46"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "linear-fitness",
+      "public_url": "https://player.wkgplay.com.br/linear-fitness/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "linear_fitness",
+        "source_commit": "389098c",
+        "sha256": "cf953d497d8825734203bfe96a3be7932e6fde15a464df7bae0065aa2229dbe3"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "live-fit",
+      "public_url": "https://player.wkgplay.com.br/live-fit/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "live_fit",
+        "source_commit": "389098c",
+        "sha256": "9bea18928dd2e6b9fc5186b00d8814932f7aff524b250cf8b242ba7138f1c29b"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "live-fit-canoas",
+      "public_url": "https://player.wkgplay.com.br/live-fit-canoas/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "live_fit_canoas",
+        "source_commit": "389098c",
+        "sha256": "8d917ba0a2bee595337da3e1b5b71da4918cbd55983a57112b36ecb38a6572ec"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "live-fit-gravatai",
+      "public_url": "https://player.wkgplay.com.br/live-fit-gravatai/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "live_fit_gravatai",
+        "source_commit": "389098c",
+        "sha256": "5ac9836eb3c7a0543b529a043bfa88560a6f3d34fac5d22d0ca11f05b79dd067"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "lord",
+      "public_url": "https://player.wkgplay.com.br/lord/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "lord",
+        "source_commit": "389098c",
+        "sha256": "0e0a92b9ae529ebd630a25a77af599708f48c427cd9fa9f90d6c852b6df050a1"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "lv-studio",
+      "public_url": "https://player.wkgplay.com.br/lv-studio/",
+      "original": {
+        "origin": "https://radios.wkgplay.com.br",
+        "shortcode": "lv_studio",
+        "source_commit": "389098c",
+        "sha256": "90680eec960d5096b7721c7572600a7bff19de8da183cac2dd4db6ee31bf53e8"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "mais",
+      "public_url": "https://player.wkgplay.com.br/mais/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "mais",
+        "source_commit": "389098c",
+        "sha256": "24f4725e7bfbc72a7fa5e70aed20d83fe0ae65721ccbb6405b7e1e13f35e737e"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "marreiro",
+      "public_url": "https://player.wkgplay.com.br/marreiro/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "marreiro",
+        "source_commit": "389098c",
+        "sha256": "fc71e5a32ada1942c518883d8992b3d568b8e9691f70af3f8af1a67c130738e8"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "md",
+      "public_url": "https://player.wkgplay.com.br/md/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "md",
+        "source_commit": "389098c",
+        "sha256": "a039a9874abdd7080365c5d0fff8f7c75b6c663384b56ab803e9f89a1532b78e"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "move",
+      "public_url": "https://player.wkgplay.com.br/move/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "move",
+        "source_commit": "389098c",
+        "sha256": "da76adbafeb199a1970c2db801b2e2b03f3f953c42086dc4580584955298f1ac"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "movimento",
+      "public_url": "https://player.wkgplay.com.br/movimento/",
+      "original": {
+        "origin": "https://radios.wkgplay.com.br",
+        "shortcode": "movimento",
+        "source_commit": "389098c",
+        "sha256": "d69d701c4ba73d29be8972c6a2ba731ed61a60a6c7d185b6f058490b302982f8"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "n-time-gym",
+      "public_url": "https://player.wkgplay.com.br/n-time-gym/",
+      "original": {
+        "origin": "https://radios.wkgplay.com.br",
+        "shortcode": "n_time_gym",
+        "source_commit": "389098c",
+        "sha256": "e0495877d1ddccf443424760d7d6eaf2746e300c8df1f986b191c50fb4cf7cc7"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "nova-fitness",
+      "public_url": "https://player.wkgplay.com.br/nova-fitness/",
+      "original": {
+        "origin": "https://radios.wkgplay.com.br",
+        "shortcode": "nova_fitness",
+        "source_commit": "389098c",
+        "sha256": "f55caf452970d105bc9c014c31f5dc6f6c681b4e03f813bee1ee0911c8c2aa12"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "oliveira",
+      "public_url": "https://player.wkgplay.com.br/oliveira/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "oliveira.",
+        "source_commit": "389098c",
+        "sha256": "c5b37e21d57b60d79186b46a455e10559f63dd6b36ed24d3ada25de012a56a9e"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "olympia",
+      "public_url": "https://player.wkgplay.com.br/olympia/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "olympia",
+        "source_commit": "389098c",
+        "sha256": "a60e415c2bbceb270332466e4d6576c0c199a42b9fb2d74798e9cf78697b45b9"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "on-training",
+      "public_url": "https://player.wkgplay.com.br/on-training/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "on_training",
+        "source_commit": "389098c",
+        "sha256": "b659e057dcd4022ea0919cfd271dd3e9ad9eb78364f4438349aefe755a54817d"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "placidio-team-jiu-jitsu",
+      "public_url": "https://player.wkgplay.com.br/placidio-team-jiu-jitsu/",
+      "original": {
+        "origin": "https://radios.wkgplay.com.br",
+        "shortcode": "placidio_team_jiu-jitsu",
+        "source_commit": "389098c",
+        "sha256": "a0a069fadbdda0d4b321e7bd3a14c7d8c973ead5b61a12335ff38f949b682a62"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "prime-club",
+      "public_url": "https://player.wkgplay.com.br/prime-club/",
+      "original": {
+        "origin": "https://radios.wkgplay.com.br",
+        "shortcode": "prime_club",
+        "source_commit": "389098c",
+        "sha256": "e76334751a051088ea1e7b728a61545ac8aac0eba119b27659551f6eeeae409c"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "prime-fitness",
+      "public_url": "https://player.wkgplay.com.br/prime-fitness/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "prime_fitness",
+        "source_commit": "389098c",
+        "sha256": "a312e54b0023e909e49c11593f0d1c8687a0a7411993d5272e2deb45f78c384b"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "profit",
+      "public_url": "https://player.wkgplay.com.br/profit/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "profit",
+        "source_commit": "389098c",
+        "sha256": "fea9d470827e6ac77441cc1c96e67a8c74958acbbf812832744f72ffee2b82cb"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "profit87",
+      "public_url": "https://player.wkgplay.com.br/profit87/",
+      "original": {
+        "origin": "https://radios.wkgplay.com.br",
+        "shortcode": "profit87",
+        "source_commit": "389098c",
+        "sha256": "4bc0e31bc1b4f9d82ba5a88a8a65418abbad5b402690681b0c5ad40bce8a146d"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "r12",
+      "public_url": "https://player.wkgplay.com.br/r12/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "r12",
+        "source_commit": "389098c",
+        "sha256": "222224cacf9e02f9b2d227b2769a603e67c81571222bb2d69b4357c32855ee56"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "rejfitness",
+      "public_url": "https://player.wkgplay.com.br/rejfitness/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "rejfitness",
+        "source_commit": "389098c",
+        "sha256": "fd689fc433d1d49ebc400e562539a98bcb92780882899b207248c74a4ac1f322"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "rihomo",
+      "public_url": "https://player.wkgplay.com.br/rihomo/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "rihomo",
+        "source_commit": "389098c",
+        "sha256": "fe702882f462c6442df94e5bf9f8e5f8c7200ce7ae05135459d526c320129d6b"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "romanos",
+      "public_url": "https://player.wkgplay.com.br/romanos/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "romanos",
+        "source_commit": "389098c",
+        "sha256": "11bd5b229cf02208982b4afb70b6d8e36c56fcbd358786945a7a5c7e130d1312"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "rrc5",
+      "public_url": "https://player.wkgplay.com.br/rrc5/",
+      "original": {
+        "origin": "https://radios.wkgplay.com.br",
+        "shortcode": "rrc5",
+        "source_commit": "389098c",
+        "sha256": "f2bf819e8f08f3010eaf99c0adb0feabc95736617ba1ebefd7adae5f996c07ff"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "select-fit",
+      "public_url": "https://player.wkgplay.com.br/select-fit/",
+      "original": {
+        "origin": "https://radios.wkgplay.com.br",
+        "shortcode": "select_fit",
+        "source_commit": "389098c",
+        "sha256": "ab4d4ac01d2ac99bfbb9b2da98275fe06c93eebe8e5417a5342e7507dc711cb1"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "startfit",
+      "public_url": "https://player.wkgplay.com.br/startfit/",
+      "original": {
+        "origin": "https://radios.wkgplay.com.br",
+        "shortcode": "startfit",
+        "source_commit": "389098c",
+        "sha256": "62222d5f6b94d15a715deb02892d6e3938dc613e7d59fb3e7145ef57b4f755cf"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "stella-magna",
+      "public_url": "https://player.wkgplay.com.br/stella-magna/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "stella_magna",
+        "source_commit": "389098c",
+        "sha256": "f3f3d7956895854e3f89589e718f2c828769aca76191ab75a96d02213b2ac55f"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "stetica",
+      "public_url": "https://player.wkgplay.com.br/stetica/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "stetica",
+        "source_commit": "389098c",
+        "sha256": "dd8d73c380612b60af4aff03d9f8431256302d0bbc06903cd664363e07bd6267"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "stik",
+      "public_url": "https://player.wkgplay.com.br/stik/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "wkg_play_fitness_-_copiar",
+        "source_commit": "389098c",
+        "sha256": "e9a5194f1aaae808f8a793ef9d095772a53d074466bfb0039414164aef54205c"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "studio-dez",
+      "public_url": "https://player.wkgplay.com.br/studio-dez/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "studio_dez",
+        "source_commit": "389098c",
+        "sha256": "5e2e125f816104274e3e266032b30d0854d0d4865d40b87b621ea00abb8d5318"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "studio-fitness",
+      "public_url": "https://player.wkgplay.com.br/studio-fitness/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "studio_fitness",
+        "source_commit": "389098c",
+        "sha256": "438d0671b7aa43abc22f7d5cbdaac0aa522bcc8e4ee1104684578dccf9923f6f"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "studio-guto-lopes",
+      "public_url": "https://player.wkgplay.com.br/studio-guto-lopes/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "studio_guto_lopes",
+        "source_commit": "389098c",
+        "sha256": "a9cb966f8baa0ac71dc96194e4c6a30b114c2bd530edbe60ba8980b31099a0ab"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "studio-my-house",
+      "public_url": "https://player.wkgplay.com.br/studio-my-house/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "studio_my_house",
+        "source_commit": "389098c",
+        "sha256": "261c907938cd5299995e6bbb35701b14dbc4607f1d5a0a6ef5d6db526510f072"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "studio-prime",
+      "public_url": "https://player.wkgplay.com.br/studio-prime/",
+      "original": {
+        "origin": "https://radios.wkgplay.com.br",
+        "shortcode": "studio_prime",
+        "source_commit": "389098c",
+        "sha256": "4e460d05814cc3f739f83706874f2edf61c1b11a649ae343ae8f733df8d72593"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "supermercado-ipiranga",
+      "public_url": "https://player.wkgplay.com.br/supermercado-ipiranga/",
+      "original": {
+        "origin": "https://radios.wkgplay.com.br",
+        "shortcode": "supermercado_ipiranga",
+        "source_commit": "389098c",
+        "sha256": "47b22d5602083e2ca6e0cd04e91dd2b64002255e14b77f8199056cd28c9c79a0"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "teste-novo",
+      "public_url": "https://player.wkgplay.com.br/teste-novo/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "teste_novo",
+        "source_commit": "389098c",
+        "sha256": "7914dfd311db011e23a16b8857dc97203b152949c769e2a5c8b54067d8943a7d"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "total-fit",
+      "public_url": "https://player.wkgplay.com.br/total-fit/",
+      "original": {
+        "origin": "https://radios.wkgplay.com.br",
+        "shortcode": "total_fit",
+        "source_commit": "389098c",
+        "sha256": "df1425b907ce0b982b501f1a13c8d99094dc36767b6e962e73828865e6bd2193"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "underground",
+      "public_url": "https://player.wkgplay.com.br/underground/",
+      "original": {
+        "origin": "https://radios.wkgplay.com.br",
+        "shortcode": "underground",
+        "source_commit": "389098c",
+        "sha256": "13ad664357ab8a95ac390cf67ddd50608ea139d384432d0c954a3324a3e8564c"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "vida-ativa",
+      "public_url": "https://player.wkgplay.com.br/vida-ativa/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "vida_ativa",
+        "source_commit": "389098c",
+        "sha256": "338842db54bb2bc186659278f7233f981b88f8c53ac3c3eca263c35f67b9de7d"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "vidativa",
+      "public_url": "https://player.wkgplay.com.br/vidativa/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "vidativa",
+        "source_commit": "389098c",
+        "sha256": "21790d67ea0f92b5f7677edcd7d882e1293f193767913113b9c938883fd76328"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "viva-fitness",
+      "public_url": "https://player.wkgplay.com.br/viva-fitness/",
+      "original": {
+        "origin": "https://radios.wkgplay.com.br",
+        "shortcode": "viva_fitness",
+        "source_commit": "389098c",
+        "sha256": "d6e003605cdbdc778bb6b70fc9ad28894dc2d077e8d03f3ff80d160454d264e4"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    },
+    {
+      "route": "wkg-play-fitness",
+      "public_url": "https://player.wkgplay.com.br/wkg-play-fitness/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "wkg_play_fitness",
+        "source_commit": "389098c",
+        "sha256": "c824c4f59e89bae3ab7a0403b58b5c52c567036084f648d7948ed14ac6542efe"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "already_using_temporary_source"
+    },
+    {
+      "route": "world-fitness",
+      "public_url": "https://player.wkgplay.com.br/world-fitness/",
+      "original": {
+        "origin": "https://radio.wkgplay.com.br",
+        "shortcode": "world_fitness",
+        "source_commit": "389098c",
+        "sha256": "1e4c12bee14c1a23fa214a2678bfeca5964f3675161eefc90bed4ebe425ef480"
+      },
+      "temporary_source": "wkg_play_fitness",
+      "status": "planned"
+    }
+  ],
+  "reversion": {
+    "authorization_required": true,
+    "condition": "Validate original Verone transmission and obtain Ton authorization before any restoration.",
+    "individual_for_general": "git restore --source=389098c -- <route>/index.html; then review, commit, and push.",
+    "general_batches": "Use git revert for the documented batch commit(s); resolve conflicts manually rather than overwriting later edits.",
+    "prior_entries": "Use the source_commit recorded per entry or the earlier contingency manifest."
+  }
+}
