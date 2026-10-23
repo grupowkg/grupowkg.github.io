@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "status": "temporary_contingency_active",
+  "created_at": "2026-10-23",
+  "scope": "WKG Play player fallback only; no AzuraCast, DNS, playlist, media, or infrastructure changes.",
+  "temporary_source": {
+    "origin": "https://radio.wkgplay.com.br",
+    "station_name": "WKG Play Fitness",
+    "shortcode": "wkg_play_fitness",
+    "listen_url": "https://radio.wkgplay.com.br/listen/wkg_play_fitness/radio.mp3"
+  },
+  "preserved_pilot": {
+    "route": "ad-fintess",
+    "public_url": "https://player.wkgplay.com.br/ad-fintess/",
+    "original": {
+      "origin": "https://radios.wkgplay.com.br",
+      "shortcode": "ad_fintess",
+      "restore_source_commit": "b70306c"
+    },
+    "temporary_status": "active",
+    "temporary_source": "wkg_play_fitness",
+    "activation_commit": "5bf855f"
+  },
+  "lote_2": [
+    {
+      "route": "alves",
+      "public_url": "https://player.wkgplay.com.br/alves/",
+      "original": {"origin": "https://radios.wkgplay.com.br", "shortcode": "alves"},
+      "temporary_status": "active",
+      "temporary_source": "wkg_play_fitness",
+      "restore_source_commit": "5bf855f"
+    },
+    {
+      "route": "atittude",
+      "public_url": "https://player.wkgplay.com.br/atittude/",
+      "original": {"origin": "https://radios.wkgplay.com.br", "shortcode": "atittude"},
+      "temporary_status": "active",
+      "temporary_source": "wkg_play_fitness",
+      "restore_source_commit": "5bf855f"
+    },
+    {
+      "route": "corpo-perfeito",
+      "public_url": "https://player.wkgplay.com.br/corpo-perfeito/",
+      "original": {"origin": "https://radios.wkgplay.com.br", "shortcode": "corpo_perfeito"},
+      "temporary_status": "active",
+      "temporary_source": "wkg_play_fitness",
+      "restore_source_commit": "5bf855f"
+    }
+  ],
+  "reversion": {
+    "authorization_required": true,
+    "condition": "Validate each original Verone transmission before restoration.",
+    "individual": "git restore --source=5bf855f -- <route>/index.html",
+    "lote_2": "git revert <lote_2_commit>",
+    "pilot_ad_fintess": "git restore --source=b70306c -- ad-fintess/index.html"
+  }
+}
