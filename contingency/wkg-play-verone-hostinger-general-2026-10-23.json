@@ -1078,6 +1078,11 @@
       "remaining_55_wrappers": "d6867fc",
       "wkg_play_fitness_wrapper": "pending_this_commit"
     },
+    "per_route_temporary_overrides": {
+      "supermercado-ipiranga": {"temporary_source": "wkg_market", "activation_commit": "pending_this_commit"},
+      "rihomo": {"temporary_source": "wkg_market", "activation_commit": "pending_this_commit"},
+      "jdb-led": {"temporary_source": "wkg_market", "activation_commit": "pending_this_commit"}
+    },
     "general_wrapper_count": 76,
     "total_contingency_count": 85
   },
