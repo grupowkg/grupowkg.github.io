@@ -166,7 +166,15 @@
         "sha256": "2306ec2f69eb048ee55e3cf36df4162fceaedd7ffb03038657ad3ecab52e21f2"
       },
       "temporary_source": "wkg_play_fitness",
-      "status": "planned"
+      "status": "restored",
+      "restoration_commit": "7878287",
+      "restoration_validated": {
+        "origin": "https://radios.wkgplay.com.br",
+        "shortcode": "underground",
+        "listen_url": "https://radios.wkgplay.com.br/listen/underground/radio.mp3",
+        "now_playing_confirmed": true,
+        "audio_bytes_confirmed": true
+      }
     },
     {
       "route": "bia-fit",
