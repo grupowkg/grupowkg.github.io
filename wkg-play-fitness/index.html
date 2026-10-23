@@ -8,9 +8,8 @@
   <body>
     <script>
       fetch('../').then(response => response.text()).then(page => {
-        // Pilot migration only: keep the public route, change its Azura origin locally.
         const stationSlug = "wkg_play_fitness";
-        const azuraOrigin = "https://radios.wkgplay.com.br";
+        const azuraOrigin = "https://radio.wkgplay.com.br";
         const enhancements =           '<style>' +
             '.brand{width:168px;height:48px}.brand img{width:185px;left:-15px;top:-72px}.art{background-size:cover;background-position:center;position:relative}.art::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(8,8,11,.08),rgba(8,8,11,.42))}.art .cover-fallback{position:relative;z-index:1;font:800 2rem Syne;color:#fff;text-shadow:0 2px 14px #000}' +
           '</style><script>' +

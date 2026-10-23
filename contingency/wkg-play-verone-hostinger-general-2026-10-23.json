@@ -1048,13 +1048,13 @@
       "route": "wkg-play-fitness",
       "public_url": "https://player.wkgplay.com.br/wkg-play-fitness/",
       "original": {
-        "origin": "https://radio.wkgplay.com.br",
+        "origin": "https://radios.wkgplay.com.br",
         "shortcode": "wkg_play_fitness",
         "source_commit": "389098c",
         "sha256": "c824c4f59e89bae3ab7a0403b58b5c52c567036084f648d7948ed14ac6542efe"
       },
       "temporary_source": "wkg_play_fitness",
-      "status": "already_using_temporary_source"
+      "status": "active"
     },
     {
       "route": "world-fitness",
@@ -1069,6 +1069,18 @@
       "status": "planned"
     }
   ],
+  "effective_deployment": {
+    "status": "active",
+    "already_on_source": [],
+    "published_commits": {
+      "general_batch_1": "6db6f2e",
+      "general_batch_2": "1d092ca",
+      "remaining_55_wrappers": "d6867fc",
+      "wkg_play_fitness_wrapper": "pending_this_commit"
+    },
+    "general_wrapper_count": 76,
+    "total_contingency_count": 85
+  },
   "reversion": {
     "authorization_required": true,
     "condition": "Validate original Verone transmission and obtain Ton authorization before any restoration.",
