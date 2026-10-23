@@ -47,6 +47,28 @@
     "shortcode": "wkg_play_fitness",
     "listen_url": "https://radio.wkgplay.com.br/listen/wkg_play_fitness/radio.mp3"
   },
+  "current_restoration_state": {
+    "recorded_at": "2026-10-23",
+    "validation": "Each restored route returned HTTP 200, the expected Now Playing station online, and at least 2,048 bytes of MP3 from its original listen_url.",
+    "validated_this_run": {
+      "commit": "f755822",
+      "routes": [
+        "ad-fintess", "cfipa", "chico-espeto", "corpolivre", "ct-ruy-bouchardet", "drogaria-tododia", "greyce-clinica-de-performance", "house-fitness", "iron-skull", "jr-fitness", "khiper", "level-up", "lf-espaco-fitness", "linear-fitness", "live-fit", "live-fit-canoas", "live-fit-gravatai", "lv-studio", "mais", "marreiro", "md", "move", "movimento", "n-time-gym", "nova-fitness", "placidio-team-jiu-jitsu", "prime-club", "prime-fitness", "profit", "profit87", "r12", "rejfitness", "romanos", "rrc5", "select-fit", "startfit", "stella-magna", "studio-dez", "studio-fitness", "studio-guto-lopes", "studio-my-house", "studio-prime", "total-fit", "vidativa", "viva-fitness", "wkg-play-fitness", "world-fitness"
+      ]
+    },
+    "already_validated": {
+      "routes": ["underground", "alves", "atittude", "corpo-perfeito", "endurance", "fit-life"],
+      "commits": ["7878287", "be4fa39"]
+    },
+    "contingency_retained": {
+      "reason": "Original endpoint did not provide a matching online station, current Now Playing, and MP3 audio during pre-validation.",
+      "routes": [
+        "aguas-claras", "bia-fit", "corpoemente_play", "cross-fc", "ct-eder-menezes", "ct-rodrigo-fitness", "dark-gym", "elite", "elite-fit", "espaco-fitness", "exclusive", "fitpress", "gracie-brasil", "gregos-fitness", "gui-guedes", "impactus", "iron-fit", "ironfitness", "jm-studio", "lets-go", "lets-prime", "lord", "oliveira", "olympia", "on-training", "stetica", "stik", "teste-novo", "vida-ativa"
+      ]
+    },
+    "excluded_wkg_market": ["supermercado-ipiranga", "rihomo", "jdb-led"],
+    "protected_hostinger_routes": "Listed in inventory.protected_hostinger_routes; unchanged."
+  },
   "entries": [
     {
       "route": "ad-fintess",
