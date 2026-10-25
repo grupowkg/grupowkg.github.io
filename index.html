@@ -22,31 +22,8 @@
       'placidio-team-jiu-jitsu':'placidio_team_jiu-jitsu'
     };
     const stationSlug = explicitPlayerConfig.stationSlug || stationMap[clientKey] || clientKey.replace(/-/g,'_');
-    const azuraOrigin = 'https://radio.wkgplay.com.br';
-    const veroneClients = new Set([
-      'ad-fintess',
-      'corpo-perfeito',
-      'greyce-clinica-de-performance',
-      'level-up',
-      'lv-studio',
-      'n-time-gym',
-      'nova-fitness',
-      'profit87',
-      'select-fit',
-      'startfit',
-      'total-fit',
-      'underground',
-      'alves',
-      'endurance',
-      'iron-skull',
-      'jdb-led',
-      'supermercado-ipiranga'
-      ,'atittude'
-      ,'placidio-team-jiu-jitsu'
-    ]);
-    const selectedAzuraOrigin = explicitPlayerConfig.origin || (veroneClients.has(clientKey)
-      ? 'https://radios.wkgplay.com.br'
-      : azuraOrigin);
+    const azuraOrigin = 'https://radios.wkgplay.com.br';
+    const selectedAzuraOrigin = explicitPlayerConfig.origin || azuraOrigin;
     const audio = new Audio(), playButton = document.querySelector('#play'), history = document.querySelector('#history'), status = document.querySelector('#status');
     const escapeHtml = value => String(value || '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[char]));
     const ago = timestamp => {const seconds=Math.max(0,Math.round(Date.now()/1000-timestamp));return seconds<60?'agora':seconds<3600?`há ${Math.floor(seconds/60)} min`:`há ${Math.floor(seconds/3600)} h`};
@@ -57,7 +34,7 @@
     const clearReconnectTimer=()=>{if(reconnectTimer){clearTimeout(reconnectTimer);reconnectTimer=null}};
     const updateButton=playing=>{playButton.textContent=playing?'❚❚':'▶';playButton.setAttribute('aria-label',playing?'Pausar rádio':'Tocar rádio')};
     const isActive=()=>!audio.paused&&!audio.ended&&audio.readyState>2;
-    const updateStation=async({replaceStream=false}={})=>{try{const response=await fetch(`${selectedAzuraOrigin}/api/nowplaying/${stationSlug}`,{cache:'no-store'});if(!response.ok) throw new Error('now-playing');const data=await response.json(),streamUrl=data?.station?.listen_url||'';document.querySelector('#radio-name').textContent=data?.station?.name||'WKG Play';document.querySelector('#song-name').textContent=data?.now_playing?.song?.text||'Ao vivo';renderHistory(data?.song_history);status.textContent=copyright;if(streamUrl&&(replaceStream||!audio.src)){lastStreamUrl=streamUrl;audio.src=streamUrl}return streamUrl}catch(_){status.textContent=copyright;return ''}};
+    const updateStation=async({replaceStream=false}={})=>{try{const response=await fetch(`${selectedAzuraOrigin}/api/nowplaying/${stationSlug}`,{cache:'no-store'});if(!response.ok) throw new Error('now-playing');const data=await response.json(),streamUrl=data?.station?.listen_url||'',artUrl=data?.now_playing?.song?.art||'';document.querySelector('#radio-name').textContent=data?.station?.name||'WKG Play';document.querySelector('#song-name').textContent=data?.now_playing?.song?.text||'Ao vivo';const art=document.querySelector('.art');if(artUrl){art.style.backgroundImage=`url("${artUrl.replace(/"/g,'%22')}")`;art.innerHTML=''}renderHistory(data?.song_history);status.textContent=copyright;if(streamUrl&&(replaceStream||!audio.src)){lastStreamUrl=streamUrl;audio.src=streamUrl}return streamUrl}catch(_){document.querySelector('#radio-name').textContent='Rádio indisponível';document.querySelector('#song-name').textContent='Confira a configuração da estação.';status.textContent='Não foi possível obter a rádio configurada.';return ''}};
     const startBufferGrace=()=>{clearBufferTimer();if(!wantsPlayback||manualPause||isActive()) return;bufferTimer=setTimeout(()=>scheduleReconnect(),12000)};
     const scheduleReconnect=()=>{if(!wantsPlayback||manualPause||reconnectTimer||recovering||navigator.onLine===false) return;clearBufferTimer();const delay=Math.min(30000,2000*2**reconnectAttempt);reconnectAttempt=Math.min(reconnectAttempt+1,4);reconnectTimer=setTimeout(()=>{reconnectTimer=null;recoverStream()},delay)};
     const recoverStream=async()=>{if(!wantsPlayback||manualPause||recovering||navigator.onLine===false) return;recovering=true;let retry=false;try{const streamUrl=await updateStation({replaceStream:true});const target=streamUrl||lastStreamUrl||audio.currentSrc||audio.src;if(!target) throw new Error('stream');if(audio.src!==target) audio.src=target;audio.load();await audio.play()}catch(_){retry=true}finally{recovering=false;if(retry) scheduleReconnect()}};

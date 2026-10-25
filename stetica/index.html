@@ -7,17 +7,20 @@
   </head>
   <body>
     <script>
-      window.__WKG_PLAYER_CONFIG = {clientKey:"wkg_play_fitness",stationSlug:"wkg_play_fitness",origin:"https://radio.wkgplay.com.br"};
-        fetch('../').then(response => response.text()).then(page => {
-        const veronePage = page.replace("const azuraOrigin = 'https://radio.wkgplay.com.br';", "const azuraOrigin = 'https://radio.wkgplay.com.br';");
-        const enhancements = '<style>' +
-          '.brand{width:168px;height:48px}.brand img{width:185px;left:-15px;top:-72px}.art{background-size:cover;background-position:center;position:relative}.art::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(8,8,11,.08),rgba(8,8,11,.42))}.art .cover-fallback{position:relative;z-index:1;font:800 2rem Syne;color:#fff;text-shadow:0 2px 14px #000}' +
-          '</style><script>' +
-          'const stationArt=document.querySelector(".art");stationArt.innerHTML="<span class=\\"cover-fallback\\">♫</span>";const stationStatus=document.querySelector("#status");const copyright="© "+new Date().getFullYear()+" Grupo WKG. Todos os direitos reservados.";const keepCopyright=()=>{if(stationStatus.textContent!==copyright)stationStatus.textContent=copyright};new MutationObserver(keepCopyright).observe(stationStatus,{childList:true,subtree:true,characterData:true});keepCopyright();fetch("https://radio.wkgplay.com.br/api/nowplaying/wkg_play_fitness_").then(response=>response.json()).then(data=>{if(data.now_playing?.song?.art)stationArt.style.backgroundImage="url(\\""+data.now_playing.song.art+"\\")"}).catch(()=>{});const stream=document.querySelector("audio"),playControl=document.querySelector("button");let wantsPlayback=false,manualPause=false,reconnectTimer=null,bufferTimer=null,reconnectAttempt=0,recovering=false,lastStreamUrl=stream?.currentSrc||stream?.src||"";const clearReconnect=()=>{if(reconnectTimer){clearTimeout(reconnectTimer);reconnectTimer=null}},clearBuffer=()=>{if(bufferTimer){clearTimeout(bufferTimer);bufferTimer=null}},isActive=()=>stream&&!stream.paused&&!stream.ended&&stream.readyState>2;const scheduleReconnect=()=>{if(!stream||!wantsPlayback||manualPause||reconnectTimer||recovering||navigator.onLine===false)return;clearBuffer();const delay=Math.min(30000,2000*2**reconnectAttempt);reconnectAttempt=Math.min(reconnectAttempt+1,4);reconnectTimer=setTimeout(()=>{reconnectTimer=null;recoverStream()},delay)},startBufferGrace=()=>{clearBuffer();if(!wantsPlayback||manualPause||isActive())return;bufferTimer=setTimeout(scheduleReconnect,12000)};async function recoverStream(){if(!stream||!wantsPlayback||manualPause||recovering||navigator.onLine===false)return;recovering=true;try{const response=await fetch("https://radio.wkgplay.com.br/api/nowplaying/wkg_play_fitness_",{cache:"no-store"});const data=response.ok?await response.json():null,target=data?.station?.listen_url||lastStreamUrl||stream.currentSrc||stream.src;if(!target)throw new Error("stream");lastStreamUrl=target;if(stream.src!==target)stream.src=target;stream.load();await stream.play()}catch(_){scheduleReconnect()}finally{recovering=false}}if(stream){playControl?.addEventListener("click",()=>{if(stream.paused){wantsPlayback=true;manualPause=false;clearReconnect()}else{wantsPlayback=false;manualPause=true;clearReconnect();clearBuffer()}},true);stream.addEventListener("playing",()=>{reconnectAttempt=0;clearReconnect();clearBuffer()});stream.addEventListener("pause",()=>{if(wantsPlayback&&!manualPause&&!stream.ended)scheduleReconnect()});stream.addEventListener("error",scheduleReconnect);stream.addEventListener("ended",scheduleReconnect);stream.addEventListener("waiting",startBufferGrace);stream.addEventListener("stalled",startBufferGrace);stream.addEventListener("progress",clearBuffer);stream.addEventListener("timeupdate",clearBuffer)}window.addEventListener("offline",()=>{clearReconnect();clearBuffer()});window.addEventListener("online",()=>{if(wantsPlayback&&!manualPause&&!isActive())scheduleReconnect()});' +
-          '<\\/script>';
+      window.__WKG_PLAYER_CONFIG = {
+        clientKey: "stetica",
+        stationSlug: "stetica_",
+        origin: 'https://radios.wkgplay.com.br'
+      };
+      fetch('../', { cache: 'no-store' }).then(response => {
+        if (!response.ok) throw new Error('player-base');
+        return response.text();
+      }).then(page => {
         document.open();
-        document.write(veronePage.replace('<head>', '<head><base href="/">').replace("const stationMap = {'wkg-play':'wkg_play','bia-fit':'bia_fit'};", "const stationMap = {'wkg-play':'wkg_play','bia-fit':'bia_fit','wkg_play_fitness':'wkg_play_fitness_'};").replace('</body>', enhancements + '</body>'));
+        document.write(page.replace('<head>', '<head><base href="/">'));
         document.close();
+      }).catch(() => {
+        document.body.textContent = 'Player indisponível. Tente novamente mais tarde.';
       });
     </script>
   </body>

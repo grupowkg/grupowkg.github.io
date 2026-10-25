@@ -1,14 +1,14 @@
 /*
  * URL examples after publication:
- * https://radio.wkgplay.com.br/bia-fit
- * https://radio.wkgplay.com.br/bio-festas
+ * https://player.wkgplay.com.br/bia-fit
+ * https://player.wkgplay.com.br/bio-festas
  *
  * Query-string access remains available for technical support:
- * https://radio.wkgplay.com.br/?station=bia_fit
+ * https://player.wkgplay.com.br/?station=bia_fit
  */
 // The player can run on the AzuraCast domain or on GitHub Pages. In both
 // cases, station metadata and audio must come from the HTTPS AzuraCast origin.
-const apiBase = "https://radio.wkgplay.com.br";
+const apiBase = "https://radios.wkgplay.com.br";
 const requestedStation = new URLSearchParams(location.search).get("station") || location.pathname.split("/").filter(Boolean).pop() || "wkg_play";
 const stationSlug = requestedStation.toLowerCase().replace(/[^a-z0-9]+/g, "_").replace(/^_|_$/g, "") || "wkg_play";
 const audio = document.querySelector("#audio");

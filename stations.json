@@ -1,322 +1,60 @@
 [
-  {
-    "route": "wkg-play-fitness",
-    "stationSlug": "wkg_play",
-    "name": "WKG Play Fitness"
-  },
-  {
-    "route": "bio-festas",
-    "stationSlug": "bio_festas",
-    "name": "Bio Festas"
-  },
-  {
-    "route": "dcasa-ibitinga",
-    "stationSlug": "dcasa_ibitinga",
-    "name": "DCasa Ibitinga"
-  },
-  {
-    "route": "damme",
-    "stationSlug": "damme",
-    "name": "Damme"
-  },
-  {
-    "route": "delifesta-campinas",
-    "stationSlug": "delifesta_campinas",
-    "name": "Delifesta Campinas"
-  },
-  {
-    "route": "delifesta-hortolandia",
-    "stationSlug": "delifesta_hortolandia",
-    "name": "Delifesta Hortolândia"
-  },
-  {
-    "route": "drogaria-tododia",
-    "stationSlug": "drogaria_tododia",
-    "name": "Drogaria Tododia"
-  },
-  {
-    "route": "lacos-de-fita",
-    "stationSlug": "lacos_de_fita",
-    "name": "Laços de Fita"
-  },
-  {
-    "route": "paulinia-winner-mall",
-    "stationSlug": "paulinia_winner_mall",
-    "name": "Paulinia Winner Mall"
-  },
-  {
-    "route": "crema-1",
-    "stationSlug": "crema_1",
-    "name": "Crema 1"
-  },
-  {
-    "route": "crema-2",
-    "stationSlug": "crema_2",
-    "name": "Crema 2"
-  },
-  {
-    "route": "crema-3",
-    "stationSlug": "crema_3",
-    "name": "Crema 3"
-  },
-  {
-    "route": "crema-4",
-    "stationSlug": "crema_4",
-    "name": "Crema 4"
-  },
-  {
-    "route": "perola",
-    "stationSlug": "perola",
-    "name": "Perola"
-  },
-  {
-    "route": "studio-my-house",
-    "stationSlug": "studio_my_house",
-    "name": "Studio My House"
-  },
-  {
-    "route": "espaco-fitness",
-    "stationSlug": "espaco_fitness",
-    "name": "Espaço Fitness"
-  },
-  {
-    "route": "r12",
-    "stationSlug": "r12",
-    "name": "R12"
-  },
-  {
-    "route": "bia-fit",
-    "stationSlug": "bia_fit",
-    "name": "Bia Fit"
-  },
-  {
-    "route": "studio-guto-lopes",
-    "stationSlug": "studio_guto_lopes",
-    "name": "Studio Guto Lópes"
-  },
-  {
-    "route": "vida-ativa",
-    "stationSlug": "vida_ativa",
-    "name": "Vida Ativa"
-  },
-  {
-    "route": "profit",
-    "stationSlug": "profit",
-    "name": "Profit"
-  },
-  {
-    "route": "live-fit",
-    "stationSlug": "live_fit",
-    "name": "Live Fit"
-  },
-  {
-    "route": "underground",
-    "stationSlug": "underground",
-    "name": "Underground"
-  },
-  {
-    "route": "ct-rodrigo-fitness",
-    "stationSlug": "ct_rodrigo_fitness",
-    "name": "CT Rodrigo Fitness"
-  },
-  {
-    "route": "house-fitness",
-    "stationSlug": "house_fitness",
-    "name": "House Fitness"
-  },
-  {
-    "route": "level-up",
-    "stationSlug": "level_up",
-    "name": "Level Up"
-  },
-  {
-    "route": "aguas-claras",
-    "stationSlug": "aguas_claras",
-    "name": "Águas Claras"
-  },
-  {
-    "route": "total-fit",
-    "stationSlug": "total_fit",
-    "name": "Total Fit"
-  },
-  {
-    "route": "jm-studio",
-    "stationSlug": "jm_studio",
-    "name": "JM Studio"
-  },
-  {
-    "route": "rihomo",
-    "stationSlug": "rihomo",
-    "name": "Rihomo"
-  },
-  {
-    "route": "vidativa",
-    "stationSlug": "vidativa",
-    "name": "Vidativa"
-  },
-  {
-    "route": "rejfitness",
-    "stationSlug": "rejfitness",
-    "name": "RejFitness"
-  },
-  {
-    "route": "stik",
-    "stationSlug": "wkg_play_fitness_-_copiar",
-    "name": "Stik"
-  },
-  {
-    "route": "romanos",
-    "stationSlug": "romanos",
-    "name": "Romanos"
-  },
-  {
-    "route": "elite-fit",
-    "stationSlug": "elite_fit",
-    "name": "Elite Fit"
-  },
-  {
-    "route": "move",
-    "stationSlug": "move",
-    "name": "Move"
-  },
-  {
-    "route": "ad-fintess",
-    "stationSlug": "ad_fintess",
-    "name": "AD Fintess"
-  },
-  {
-    "route": "olympia",
-    "stationSlug": "olympia",
-    "name": "Olympia"
-  },
-  {
-    "route": "lord",
-    "stationSlug": "lord",
-    "name": "Lord"
-  },
-  {
-    "route": "prime-fitness",
-    "stationSlug": "prime_fitness",
-    "name": "Prime Fitness"
-  },
-  {
-    "route": "teste-novo",
-    "stationSlug": "teste_novo",
-    "name": "Teste Novo"
-  },
-  {
-    "route": "on-training",
-    "stationSlug": "on_training",
-    "name": "On Training"
-  },
-  {
-    "route": "gregos-fitness",
-    "stationSlug": "gregos_fitness",
-    "name": "Gregos Fitness"
-  },
-  {
-    "route": "jr-fitness",
-    "stationSlug": "jr_fitness",
-    "name": "JR Fitness"
-  },
-  {
-    "route": "ct-eder-menezes",
-    "stationSlug": "ct_eder_menezes",
-    "name": "CT Éder Menezes"
-  },
-  {
-    "route": "dark-gym",
-    "stationSlug": "dark_gym",
-    "name": "Dark Gym"
-  },
-  {
-    "route": "marreiro",
-    "stationSlug": "marreiro",
-    "name": "Marreiro"
-  },
-  {
-    "route": "md",
-    "stationSlug": "md",
-    "name": "MD"
-  },
-  {
-    "route": "fitpress",
-    "stationSlug": "fitpress",
-    "name": "Fit'Press"
-  },
-  {
-    "route": "gracie-brasil",
-    "stationSlug": "gracie_brasil",
-    "name": "Gracie Brasil"
-  },
-  {
-    "route": "corpo-perfeito",
-    "stationSlug": "corpo_perfeito",
-    "name": "Corpo Perfeito"
-  },
-  {
-    "route": "gui-guedes",
-    "stationSlug": "gui_guedes",
-    "name": "Gui Guedes"
-  },
-  {
-    "route": "elite",
-    "stationSlug": "elite",
-    "name": "Elite"
-  },
-  {
-    "route": "movimento",
-    "stationSlug": "movimento",
-    "name": "Movimento"
-  },
-  {
-    "route": "exclusive",
-    "stationSlug": "exclusive",
-    "name": "Exclusive"
-  },
-  {
-    "route": "live-fit-canoas",
-    "stationSlug": "live_fit_canoas",
-    "name": "Live Fit Canoas"
-  },
-  {
-    "route": "live-fit-gravatai",
-    "stationSlug": "live_fit_gravatai",
-    "name": "Live Fit Gravataí"
-  },
-  {
-    "route": "khiper",
-    "stationSlug": "khiper",
-    "name": "Khiper"
-  },
-  {
-    "route": "studio-fitness",
-    "stationSlug": "studio_fitness",
-    "name": "Studio Fitness"
-  },
-  {
-    "route": "ct-ruy-bouchardet",
-    "stationSlug": "ct_ruy_bouchardet",
-    "name": "CT Ruy Bouchardet"
-  },
-  {
-    "route": "mais",
-    "stationSlug": "mais",
-    "name": "Mais"
-  },
-  {
-    "route": "lets-go",
-    "stationSlug": "lets_go_",
-    "name": "Lets Go"
-  },
-  {
-    "route": "lets-prime",
-    "stationSlug": "lets_prime",
-    "name": "Lets Prime"
-  },
-  {
-    "route": "linear-fitness",
-    "stationSlug": "linear_fitness",
-    "name": "Linear Fitness"
-  }
+  {"route":"ad-fintess","stationSlug":"ad_fintess","name":"AD Fintess"},
+  {"route":"live-fit","stationSlug":"live_fit","name":"Live Fit Viamão"},
+  {"route":"lets-go","stationSlug":"lets_go_","name":"Lets Go"},
+  {"route":"corpo-perfeito","stationSlug":"corpo_perfeito","name":"Corpo Perfeito"},
+  {"route":"corpolivre","stationSlug":"corpolivre","name":"CorpoLivre"},
+  {"route":"ct-ruy-bouchardet","stationSlug":"ct_ruy_bouchardet","name":"CT Ruy Bouchardet"},
+  {"route":"dark-gym","stationSlug":"dark_gym","name":"Dark Gym"},
+  {"route":"espaco-fitness","stationSlug":"espaco_fitness","name":"Espaço Fitness"},
+  {"route":"house-fitness","stationSlug":"house_fitness","name":"House Fitness"},
+  {"route":"impactus","stationSlug":"impactus","name":"Impactus"},
+  {"route":"ironfitness","stationSlug":"ironfitness","name":"Ironfitness"},
+  {"route":"jr-fitness","stationSlug":"jr_fitness","name":"JR Fitness"},
+  {"route":"khiper","stationSlug":"khiper","name":"Khiper"},
+  {"route":"lets-prime","stationSlug":"lets_prime","name":"Lets Prime"},
+  {"route":"level-up","stationSlug":"level_up","name":"Level Up"},
+  {"route":"linear-fitness","stationSlug":"linear_fitness","name":"Linear Fitness"},
+  {"route":"live-fit-canoas","stationSlug":"live_fit_canoas","name":"Live Fit Canoas"},
+  {"route":"live-fit-gravatai","stationSlug":"live_fit_gravatai","name":"Live Fit Gravataí"},
+  {"route":"mais","stationSlug":"mais","name":"Mais"},
+  {"route":"marreiro","stationSlug":"marreiro","name":"Marreiro"},
+  {"route":"md","stationSlug":"md","name":"MD"},
+  {"route":"move","stationSlug":"move","name":"Move"},
+  {"route":"movimento","stationSlug":"movimento","name":"Movimento"},
+  {"route":"prime-fitness","stationSlug":"prime_fitness","name":"Prime Fitness"},
+  {"route":"r12","stationSlug":"r12","name":"R12"},
+  {"route":"rejfitness","stationSlug":"rejfitness","name":"RejFitness"},
+  {"route":"stetica","stationSlug":"stetica_","name":"Stetica"},
+  {"route":"studio-dez","stationSlug":"studio_dez","name":"Studio Dez"},
+  {"route":"studio-fitness","stationSlug":"studio_fitness","name":"Studio Fitness"},
+  {"route":"total-fit","stationSlug":"total_fit","name":"Total Fit"},
+  {"route":"underground","stationSlug":"underground","name":"Underground"},
+  {"route":"vidativa","stationSlug":"vidativa","name":"Vidativa"},
+  {"route":"wkg-play-fitness","stationSlug":"wkg_play_fitness","name":"WKG Play Fitness"},
+  {"route":"world-fitness","stationSlug":"world_fitness","name":"World Fitness"},
+  {"route":"corpoemente_play","stationSlug":"corpoemente_play","name":"Corpo e Mente Play"},
+  {"route":"prime-club","stationSlug":"prime_club","name":"Prime Club"},
+  {"route":"lf-espaco-fitness","stationSlug":"lf_espaço_fitness","name":"LF Espaço Fitness"},
+  {"route":"studio-prime","stationSlug":"studio_prime","name":"Studio Prime"},
+  {"route":"rrc5","stationSlug":"rrc5","name":"RRC5"},
+  {"route":"stik","stationSlug":"stik","name":"Stik"},
+  {"route":"viva-fitness","stationSlug":"viva_fitness","name":"Viva Fitness"},
+  {"route":"cfipa","stationSlug":"cfipa","name":"CFIPA"},
+  {"route":"select-fit","stationSlug":"select_fit","name":"Select Fit"},
+  {"route":"chico-espeto","stationSlug":"chico_espeto","name":"Chico Espeto"},
+  {"route":"nova-fitness","stationSlug":"nova_fitness","name":"Nova Fitness"},
+  {"route":"greyce-clinica-de-performance","stationSlug":"greyce_clinica_de_performance","name":"Greyce Clínica de Performance"},
+  {"route":"lv-studio","stationSlug":"lv_studio","name":"LV Studio"},
+  {"route":"n-time-gym","stationSlug":"n_time_gym","name":"N Time Gym"},
+  {"route":"startfit","stationSlug":"startfit","name":"Startfit"},
+  {"route":"profit87","stationSlug":"profit87","name":"Profit87"},
+  {"route":"endurance","stationSlug":"endurance","name":"Endurance"},
+  {"route":"alves","stationSlug":"alves","name":"Alves"},
+  {"route":"iron-skull","stationSlug":"iron_skull","name":"Iron Skull"},
+  {"route":"supermercado-ipiranga","stationSlug":"supermercado_ipiranga","name":"Supermercado Ipiranga"},
+  {"route":"jdb-led","stationSlug":"jdb_led","name":"JBD LED"},
+  {"route":"atittude","stationSlug":"atittude","name":"Atittude"},
+  {"route":"placidio-team-jiu-jitsu","stationSlug":"placidio_team_jiu-jitsu","name":"Placidio Team Jiu-Jitsu"},
+  {"route":"fit-life","stationSlug":"fit_life","name":"Fit Life"}
 ]
