@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Rádio Melburn Fitness | WKG Play</title>
+  </head>
+  <body>
+    <script>
+      window.__WKG_PLAYER_CONFIG = {
+        clientKey: "melburn-fitness",
+        stationSlug: "melburn_fitness",
+        origin: "https://radios.wkgplay.com.br"
+      };
+      fetch('../', { cache: 'no-store' }).then(response => {
+        if (!response.ok) throw new Error('player-base');
+        return response.text();
+      }).then(page => {
+        document.open();
+        document.write(page.replace('<head>', '<head><base href="/">'));
+        document.close();
+      }).catch(() => {
+        document.body.textContent = 'Player indisponível. Tente novamente mais tarde.';
+      });
+    </script>
+  </body>
+</html>
