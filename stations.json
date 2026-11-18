@@ -1,5 +1,6 @@
 [
   {"route":"ad-fintess","stationSlug":"ad_fintess","name":"AD Fintess"},
+  {"route":"belo-gym","stationSlug":"40_graus","name":"Belo Gym"},
   {"route":"live-fit","stationSlug":"live_fit","name":"Live Fit Viamão"},
   {"route":"lets-go","stationSlug":"lets_go_","name":"Lets Go"},
   {"route":"corpo-perfeito","stationSlug":"corpo_perfeito","name":"Corpo Perfeito"},
