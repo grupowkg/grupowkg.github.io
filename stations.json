@@ -8,6 +8,7 @@
   {"route":"ct-ruy-bouchardet","stationSlug":"ct_ruy_bouchardet","name":"CT Ruy Bouchardet"},
   {"route":"dark-gym","stationSlug":"dark_gym","name":"Dark Gym"},
   {"route":"espaco-fitness","stationSlug":"espaco_fitness","name":"Espaço Fitness"},
+  {"route":"fit10","stationSlug":"fit10","name":"Fit10"},
   {"route":"house-fitness","stationSlug":"house_fitness","name":"House Fitness"},
   {"route":"impactus","stationSlug":"impactus","name":"Impactus"},
   {"route":"ironfitness","stationSlug":"ironfitness","name":"Ironfitness"},
