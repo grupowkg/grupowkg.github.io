@@ -10,7 +10,10 @@
       window.__WKG_PLAYER_CONFIG = {
         clientKey: "jdb-led",
         stationSlug: "jdb_led",
-        origin: 'https://radios.wkgplay.com.br'
+        origin: 'https://radios.wkgplay.com.br',
+        backgroundAudioPilot: true,
+        manifestPath: "/jdb-led/manifest.webmanifest",
+        serviceWorkerPath: "/jdb-led/service-worker.js"
       };
       fetch('../', { cache: 'no-store' }).then(response => {
         if (!response.ok) throw new Error('player-base');

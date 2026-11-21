@@ -1,0 +1,16 @@
+{
+  "name": "Rádio Studio Dez | WKG Play",
+  "short_name": "Studio Dez",
+  "start_url": "/studio-dez/",
+  "scope": "/studio-dez/",
+  "display": "standalone",
+  "background_color": "#0b0b0e",
+  "theme_color": "#0b0b0e",
+  "icons": [
+    {
+      "src": "/wkg-play-logo.jpg",
+      "sizes": "any",
+      "type": "image/jpeg"
+    }
+  ]
+}

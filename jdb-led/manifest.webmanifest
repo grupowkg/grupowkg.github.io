@@ -1,0 +1,16 @@
+{
+  "name": "Rádio JBD LED | WKG Play",
+  "short_name": "JBD LED",
+  "start_url": "/jdb-led/",
+  "scope": "/jdb-led/",
+  "display": "standalone",
+  "background_color": "#0b0b0e",
+  "theme_color": "#0b0b0e",
+  "icons": [
+    {
+      "src": "/wkg-play-logo.jpg",
+      "sizes": "any",
+      "type": "image/jpeg"
+    }
+  ]
+}

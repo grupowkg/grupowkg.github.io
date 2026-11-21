@@ -1,0 +1,16 @@
+{
+  "name": "Rádio Fit10 | WKG Play",
+  "short_name": "Fit10",
+  "start_url": "/fit10/",
+  "scope": "/fit10/",
+  "display": "standalone",
+  "background_color": "#0b0b0e",
+  "theme_color": "#0b0b0e",
+  "icons": [
+    {
+      "src": "/wkg-play-logo.jpg",
+      "sizes": "any",
+      "type": "image/jpeg"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Rádio Vidativa | WKG Play",
+  "short_name": "Vidativa",
+  "start_url": "/vidativa/",
+  "scope": "/vidativa/",
+  "display": "standalone",
+  "background_color": "#0b0b0e",
+  "theme_color": "#0b0b0e",
+  "icons": [
+    {
+      "src": "/wkg-play-logo.jpg",
+      "sizes": "any",
+      "type": "image/jpeg"
+    }
+  ]
+}

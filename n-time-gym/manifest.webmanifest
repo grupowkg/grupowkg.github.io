@@ -1,0 +1,16 @@
+{
+  "name": "Rádio N Time Gym | WKG Play",
+  "short_name": "N Time Gym",
+  "start_url": "/n-time-gym/",
+  "scope": "/n-time-gym/",
+  "display": "standalone",
+  "background_color": "#0b0b0e",
+  "theme_color": "#0b0b0e",
+  "icons": [
+    {
+      "src": "/wkg-play-logo.jpg",
+      "sizes": "any",
+      "type": "image/jpeg"
+    }
+  ]
+}

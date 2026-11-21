@@ -1,0 +1,16 @@
+{
+  "name": "Rádio CT Ruy Bouchardet | WKG Play",
+  "short_name": "CT Ruy Bouchardet",
+  "start_url": "/ct-ruy-bouchardet/",
+  "scope": "/ct-ruy-bouchardet/",
+  "display": "standalone",
+  "background_color": "#0b0b0e",
+  "theme_color": "#0b0b0e",
+  "icons": [
+    {
+      "src": "/wkg-play-logo.jpg",
+      "sizes": "any",
+      "type": "image/jpeg"
+    }
+  ]
+}

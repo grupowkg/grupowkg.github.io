@@ -10,7 +10,10 @@
       window.__WKG_PLAYER_CONFIG = {
         clientKey: "studio-dez",
         stationSlug: "studio_dez",
-        origin: 'https://radios.wkgplay.com.br'
+        origin: 'https://radios.wkgplay.com.br',
+        backgroundAudioPilot: true,
+        manifestPath: "/studio-dez/manifest.webmanifest",
+        serviceWorkerPath: "/studio-dez/service-worker.js"
       };
       fetch('../', { cache: 'no-store' }).then(response => {
         if (!response.ok) throw new Error('player-base');

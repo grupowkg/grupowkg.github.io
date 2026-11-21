@@ -1,4 +1,4 @@
-// Enables installability for the JR Fitness pilot. Live audio is never cached.
+// Enables installability. Live audio is never cached.
 self.addEventListener('install', () => self.skipWaiting());
 self.addEventListener('activate', event => event.waitUntil(self.clients.claim()));
 self.addEventListener('fetch', event => {

@@ -1,0 +1,16 @@
+{
+  "name": "Rádio AD Fintess | WKG Play",
+  "short_name": "AD Fintess",
+  "start_url": "/ad-fintess/",
+  "scope": "/ad-fintess/",
+  "display": "standalone",
+  "background_color": "#0b0b0e",
+  "theme_color": "#0b0b0e",
+  "icons": [
+    {
+      "src": "/wkg-play-logo.jpg",
+      "sizes": "any",
+      "type": "image/jpeg"
+    }
+  ]
+}

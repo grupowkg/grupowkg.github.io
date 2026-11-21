@@ -1,0 +1,16 @@
+{
+  "name": "Rádio Ironfitness | WKG Play",
+  "short_name": "Ironfitness",
+  "start_url": "/ironfitness/",
+  "scope": "/ironfitness/",
+  "display": "standalone",
+  "background_color": "#0b0b0e",
+  "theme_color": "#0b0b0e",
+  "icons": [
+    {
+      "src": "/wkg-play-logo.jpg",
+      "sizes": "any",
+      "type": "image/jpeg"
+    }
+  ]
+}

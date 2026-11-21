@@ -1,0 +1,16 @@
+{
+  "name": "Rádio Lets Prime | WKG Play",
+  "short_name": "Lets Prime",
+  "start_url": "/lets-prime/",
+  "scope": "/lets-prime/",
+  "display": "standalone",
+  "background_color": "#0b0b0e",
+  "theme_color": "#0b0b0e",
+  "icons": [
+    {
+      "src": "/wkg-play-logo.jpg",
+      "sizes": "any",
+      "type": "image/jpeg"
+    }
+  ]
+}

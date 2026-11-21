@@ -1,0 +1,16 @@
+{
+  "name": "Rádio Total Fit | WKG Play",
+  "short_name": "Total Fit",
+  "start_url": "/total-fit/",
+  "scope": "/total-fit/",
+  "display": "standalone",
+  "background_color": "#0b0b0e",
+  "theme_color": "#0b0b0e",
+  "icons": [
+    {
+      "src": "/wkg-play-logo.jpg",
+      "sizes": "any",
+      "type": "image/jpeg"
+    }
+  ]
+}

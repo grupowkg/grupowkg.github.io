@@ -1,0 +1,16 @@
+{
+  "name": "Rádio Profit87 | WKG Play",
+  "short_name": "Profit87",
+  "start_url": "/profit87/",
+  "scope": "/profit87/",
+  "display": "standalone",
+  "background_color": "#0b0b0e",
+  "theme_color": "#0b0b0e",
+  "icons": [
+    {
+      "src": "/wkg-play-logo.jpg",
+      "sizes": "any",
+      "type": "image/jpeg"
+    }
+  ]
+}

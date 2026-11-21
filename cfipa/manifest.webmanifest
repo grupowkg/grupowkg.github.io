@@ -1,0 +1,16 @@
+{
+  "name": "Rádio CFIPA | WKG Play",
+  "short_name": "CFIPA",
+  "start_url": "/cfipa/",
+  "scope": "/cfipa/",
+  "display": "standalone",
+  "background_color": "#0b0b0e",
+  "theme_color": "#0b0b0e",
+  "icons": [
+    {
+      "src": "/wkg-play-logo.jpg",
+      "sizes": "any",
+      "type": "image/jpeg"
+    }
+  ]
+}

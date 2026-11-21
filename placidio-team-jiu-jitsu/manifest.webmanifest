@@ -1,0 +1,16 @@
+{
+  "name": "Rádio Placidio Team Jiu-Jitsu | WKG Play",
+  "short_name": "Placidio Team Jiu-Jitsu",
+  "start_url": "/placidio-team-jiu-jitsu/",
+  "scope": "/placidio-team-jiu-jitsu/",
+  "display": "standalone",
+  "background_color": "#0b0b0e",
+  "theme_color": "#0b0b0e",
+  "icons": [
+    {
+      "src": "/wkg-play-logo.jpg",
+      "sizes": "any",
+      "type": "image/jpeg"
+    }
+  ]
+}

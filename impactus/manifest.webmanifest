@@ -1,0 +1,16 @@
+{
+  "name": "Rádio Impactus | WKG Play",
+  "short_name": "Impactus",
+  "start_url": "/impactus/",
+  "scope": "/impactus/",
+  "display": "standalone",
+  "background_color": "#0b0b0e",
+  "theme_color": "#0b0b0e",
+  "icons": [
+    {
+      "src": "/wkg-play-logo.jpg",
+      "sizes": "any",
+      "type": "image/jpeg"
+    }
+  ]
+}

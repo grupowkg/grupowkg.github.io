@@ -12,8 +12,8 @@
         stationSlug: "jr_fitness",
         origin: 'https://radios.wkgplay.com.br',
         backgroundAudioPilot: true,
-        manifestPath: '/jr-fitness/manifest.webmanifest',
-        serviceWorkerPath: '/jr-fitness/service-worker.js'
+        manifestPath: "/jr-fitness/manifest.webmanifest",
+        serviceWorkerPath: "/jr-fitness/service-worker.js"
       };
       fetch('../', { cache: 'no-store' }).then(response => {
         if (!response.ok) throw new Error('player-base');

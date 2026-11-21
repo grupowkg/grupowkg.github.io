@@ -1,0 +1,16 @@
+{
+  "name": "Rádio Iron Skull | WKG Play",
+  "short_name": "Iron Skull",
+  "start_url": "/iron-skull/",
+  "scope": "/iron-skull/",
+  "display": "standalone",
+  "background_color": "#0b0b0e",
+  "theme_color": "#0b0b0e",
+  "icons": [
+    {
+      "src": "/wkg-play-logo.jpg",
+      "sizes": "any",
+      "type": "image/jpeg"
+    }
+  ]
+}

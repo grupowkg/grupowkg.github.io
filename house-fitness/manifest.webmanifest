@@ -1,0 +1,16 @@
+{
+  "name": "Rádio House Fitness | WKG Play",
+  "short_name": "House Fitness",
+  "start_url": "/house-fitness/",
+  "scope": "/house-fitness/",
+  "display": "standalone",
+  "background_color": "#0b0b0e",
+  "theme_color": "#0b0b0e",
+  "icons": [
+    {
+      "src": "/wkg-play-logo.jpg",
+      "sizes": "any",
+      "type": "image/jpeg"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Rádio Underground | WKG Play",
+  "short_name": "Underground",
+  "start_url": "/underground/",
+  "scope": "/underground/",
+  "display": "standalone",
+  "background_color": "#0b0b0e",
+  "theme_color": "#0b0b0e",
+  "icons": [
+    {
+      "src": "/wkg-play-logo.jpg",
+      "sizes": "any",
+      "type": "image/jpeg"
+    }
+  ]
+}

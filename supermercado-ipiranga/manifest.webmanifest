@@ -1,0 +1,16 @@
+{
+  "name": "Rádio Supermercado Ipiranga | WKG Play",
+  "short_name": "Supermercado Ipiranga",
+  "start_url": "/supermercado-ipiranga/",
+  "scope": "/supermercado-ipiranga/",
+  "display": "standalone",
+  "background_color": "#0b0b0e",
+  "theme_color": "#0b0b0e",
+  "icons": [
+    {
+      "src": "/wkg-play-logo.jpg",
+      "sizes": "any",
+      "type": "image/jpeg"
+    }
+  ]
+}

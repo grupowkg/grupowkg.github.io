@@ -1,1 +1,30 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Rádio Fit10 | WKG Play</title></head><body><script>window.__WKG_PLAYER_CONFIG={clientKey:"fit10",stationSlug:"fit10",origin:"https://radios.wkgplay.com.br"};fetch('../',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('player-base');return r.text()}).then(p=>{document.open();document.write(p.replace('<head>','<head><base href="/">'));document.close()}).catch(()=>{document.body.textContent='Player indisponível. Tente novamente mais tarde.'});</script></body></html>
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Rádio Fit10 | WKG Play</title>
+  </head>
+  <body>
+    <script>
+      window.__WKG_PLAYER_CONFIG = {
+        clientKey: "fit10",
+        stationSlug: "fit10",
+        origin: 'https://radios.wkgplay.com.br',
+        backgroundAudioPilot: true,
+        manifestPath: "/fit10/manifest.webmanifest",
+        serviceWorkerPath: "/fit10/service-worker.js"
+      };
+      fetch('../', { cache: 'no-store' }).then(response => {
+        if (!response.ok) throw new Error('player-base');
+        return response.text();
+      }).then(page => {
+        document.open();
+        document.write(page.replace('<head>', '<head><base href="/">'));
+        document.close();
+      }).catch(() => {
+        document.body.textContent = 'Player indisponível. Tente novamente mais tarde.';
+      });
+    </script>
+  </body>
+</html>

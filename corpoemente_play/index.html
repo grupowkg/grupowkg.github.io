@@ -10,7 +10,10 @@
       window.__WKG_PLAYER_CONFIG = {
         clientKey: "corpoemente_play",
         stationSlug: "corpoemente_play",
-        origin: 'https://radios.wkgplay.com.br'
+        origin: 'https://radios.wkgplay.com.br',
+        backgroundAudioPilot: true,
+        manifestPath: "/corpoemente_play/manifest.webmanifest",
+        serviceWorkerPath: "/corpoemente_play/service-worker.js"
       };
       fetch('../', { cache: 'no-store' }).then(response => {
         if (!response.ok) throw new Error('player-base');

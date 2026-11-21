@@ -1,0 +1,16 @@
+{
+  "name": "Rádio LV Studio | WKG Play",
+  "short_name": "LV Studio",
+  "start_url": "/lv-studio/",
+  "scope": "/lv-studio/",
+  "display": "standalone",
+  "background_color": "#0b0b0e",
+  "theme_color": "#0b0b0e",
+  "icons": [
+    {
+      "src": "/wkg-play-logo.jpg",
+      "sizes": "any",
+      "type": "image/jpeg"
+    }
+  ]
+}

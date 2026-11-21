@@ -1,0 +1,16 @@
+{
+  "name": "Rádio Dark Gym | WKG Play",
+  "short_name": "Dark Gym",
+  "start_url": "/dark-gym/",
+  "scope": "/dark-gym/",
+  "display": "standalone",
+  "background_color": "#0b0b0e",
+  "theme_color": "#0b0b0e",
+  "icons": [
+    {
+      "src": "/wkg-play-logo.jpg",
+      "sizes": "any",
+      "type": "image/jpeg"
+    }
+  ]
+}

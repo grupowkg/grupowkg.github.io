@@ -10,7 +10,10 @@
       window.__WKG_PLAYER_CONFIG = {
         clientKey: "ct-ruy-bouchardet",
         stationSlug: "ct_ruy_bouchardet",
-        origin: 'https://radios.wkgplay.com.br'
+        origin: 'https://radios.wkgplay.com.br',
+        backgroundAudioPilot: true,
+        manifestPath: "/ct-ruy-bouchardet/manifest.webmanifest",
+        serviceWorkerPath: "/ct-ruy-bouchardet/service-worker.js"
       };
       fetch('../', { cache: 'no-store' }).then(response => {
         if (!response.ok) throw new Error('player-base');

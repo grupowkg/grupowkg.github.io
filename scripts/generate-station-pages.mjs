@@ -24,7 +24,10 @@ const page = ({ name, route, stationSlug }) => `<!doctype html>
       window.__WKG_PLAYER_CONFIG = {
         clientKey: ${JSON.stringify(route)},
         stationSlug: ${JSON.stringify(stationSlug)},
-        origin: 'https://radios.wkgplay.com.br'
+        origin: 'https://radios.wkgplay.com.br',
+        backgroundAudioPilot: true,
+        manifestPath: ${JSON.stringify(`/${route}/manifest.webmanifest`)},
+        serviceWorkerPath: ${JSON.stringify(`/${route}/service-worker.js`)}
       };
       fetch('../', { cache: 'no-store' }).then(response => {
         if (!response.ok) throw new Error('player-base');
@@ -41,6 +44,19 @@ const page = ({ name, route, stationSlug }) => `<!doctype html>
 </html>
 `;
 
+const webManifest = ({ name, route }) => JSON.stringify({
+  name: `Rádio ${name} | WKG Play`,
+  short_name: name,
+  start_url: `/${route}/`,
+  scope: `/${route}/`,
+  display: 'standalone',
+  background_color: '#0b0b0e',
+  theme_color: '#0b0b0e',
+  icons: [{ src: '/wkg-play-logo.jpg', sizes: 'any', type: 'image/jpeg' }]
+}, null, 2).concat('\n');
+
+const serviceWorker = `// Enables installability. Live audio is never cached.\nself.addEventListener('install', () => self.skipWaiting());\nself.addEventListener('activate', event => event.waitUntil(self.clients.claim()));\nself.addEventListener('fetch', event => {\n  if (event.request.mode === 'navigate') event.respondWith(fetch(event.request));\n});\n`;
+
 for (const station of stations) {
   const { route, stationSlug, name } = station;
   if (!/^[a-z0-9][a-z0-9_-]*$/.test(route) || !stationSlug || !name) {
@@ -49,6 +65,8 @@ for (const station of stations) {
   const output = resolve(projectRoot, route, 'index.html');
   await mkdir(dirname(output), { recursive: true });
   await writeFile(output, page(station));
+  await writeFile(resolve(projectRoot, route, 'manifest.webmanifest'), webManifest(station));
+  await writeFile(resolve(projectRoot, route, 'service-worker.js'), serviceWorker);
 }
 
 console.log(`Generated ${stations.length} mapped Verone player pages.`);

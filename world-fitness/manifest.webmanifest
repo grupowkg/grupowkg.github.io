@@ -1,0 +1,16 @@
+{
+  "name": "Rádio World Fitness | WKG Play",
+  "short_name": "World Fitness",
+  "start_url": "/world-fitness/",
+  "scope": "/world-fitness/",
+  "display": "standalone",
+  "background_color": "#0b0b0e",
+  "theme_color": "#0b0b0e",
+  "icons": [
+    {
+      "src": "/wkg-play-logo.jpg",
+      "sizes": "any",
+      "type": "image/jpeg"
+    }
+  ]
+}

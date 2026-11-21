@@ -1,0 +1,16 @@
+{
+  "name": "Rádio RRC5 | WKG Play",
+  "short_name": "RRC5",
+  "start_url": "/rrc5/",
+  "scope": "/rrc5/",
+  "display": "standalone",
+  "background_color": "#0b0b0e",
+  "theme_color": "#0b0b0e",
+  "icons": [
+    {
+      "src": "/wkg-play-logo.jpg",
+      "sizes": "any",
+      "type": "image/jpeg"
+    }
+  ]
+}
