@@ -24,25 +24,50 @@
     const stationSlug = explicitPlayerConfig.stationSlug || stationMap[clientKey] || clientKey.replace(/-/g,'_');
     const azuraOrigin = 'https://radios.wkgplay.com.br';
     const selectedAzuraOrigin = explicitPlayerConfig.origin || azuraOrigin;
+    const backgroundAudioPilot = explicitPlayerConfig.backgroundAudioPilot === true;
     const audio = new Audio(), playButton = document.querySelector('#play'), history = document.querySelector('#history'), status = document.querySelector('#status');
     const escapeHtml = value => String(value || '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[char]));
     const ago = timestamp => {const seconds=Math.max(0,Math.round(Date.now()/1000-timestamp));return seconds<60?'agora':seconds<3600?`há ${Math.floor(seconds/60)} min`:`há ${Math.floor(seconds/3600)} h`};
     const renderHistory = songs => {history.innerHTML=(songs||[]).slice(0,4).map(song=>`<div class="history-item"><span class="history-icon">♫</span><span><b class="history-title">${escapeHtml(song.song?.title||'Sem título')}</b><small class="history-artist">${escapeHtml(song.song?.artist||'WKG Play')}</small></span><span class="history-time">${ago(song.played_at)}</span></div>`).join('')};
     const copyright='© '+new Date().getFullYear()+' Grupo WKG. Todos os direitos reservados.';
+    const setMediaSession = data => {
+      if (!backgroundAudioPilot || !('mediaSession' in navigator) || !('MediaMetadata' in window)) return;
+      const details=data?.station||{}, song=data?.now_playing?.song||{};
+      const title=song.title||song.text||details.name||'WKG Play';
+      const artist=song.artist||details.name||'WKG Play';
+      const artwork=song.art||details.logo_url||'';
+      navigator.mediaSession.metadata=new MediaMetadata({title,artist,album:details.name||'WKG Play',artwork:artwork?[{src:artwork,sizes:'512x512',type:'image/jpeg'}]:[]});
+    };
+    const configureBackgroundAudioPilot = () => {
+      if (!backgroundAudioPilot) return;
+      document.querySelector('meta[name="theme-color"]')?.setAttribute('content','#0b0b0e');
+      if (explicitPlayerConfig.manifestPath && !document.querySelector('link[rel="manifest"]')) {
+        const manifest=document.createElement('link');
+        manifest.rel='manifest'; manifest.href=explicitPlayerConfig.manifestPath; document.head.append(manifest);
+      }
+      if ('mediaSession' in navigator) {
+        [['play',startPlayback],['pause',pausePlayback],['stop',pausePlayback]].forEach(([action,handler])=>{
+          try { navigator.mediaSession.setActionHandler(action,handler); } catch (_) {}
+        });
+      }
+      if ('serviceWorker' in navigator && explicitPlayerConfig.serviceWorkerPath) {
+        window.addEventListener('load',()=>navigator.serviceWorker.register(explicitPlayerConfig.serviceWorkerPath,{scope:'/jr-fitness/'}).catch(()=>{}),{once:true});
+      }
+    };
     let wantsPlayback=false,manualPause=false,reconnectTimer=null,bufferTimer=null,reconnectAttempt=0,recovering=false,lastStreamUrl='';
     const clearBufferTimer=()=>{if(bufferTimer){clearTimeout(bufferTimer);bufferTimer=null}};
     const clearReconnectTimer=()=>{if(reconnectTimer){clearTimeout(reconnectTimer);reconnectTimer=null}};
     const updateButton=playing=>{playButton.textContent=playing?'❚❚':'▶';playButton.setAttribute('aria-label',playing?'Pausar rádio':'Tocar rádio')};
     const isActive=()=>!audio.paused&&!audio.ended&&audio.readyState>2;
-    const updateStation=async({replaceStream=false}={})=>{try{const response=await fetch(`${selectedAzuraOrigin}/api/nowplaying/${stationSlug}`,{cache:'no-store'});if(!response.ok) throw new Error('now-playing');const data=await response.json(),streamUrl=data?.station?.listen_url||'',artUrl=data?.now_playing?.song?.art||'';document.querySelector('#radio-name').textContent=data?.station?.name||'WKG Play';document.querySelector('#song-name').textContent=data?.now_playing?.song?.text||'Ao vivo';const art=document.querySelector('.art');if(artUrl){art.style.backgroundImage=`url("${artUrl.replace(/"/g,'%22')}")`;art.innerHTML=''}renderHistory(data?.song_history);status.textContent=copyright;if(streamUrl&&(replaceStream||!audio.src)){lastStreamUrl=streamUrl;audio.src=streamUrl}return streamUrl}catch(_){document.querySelector('#radio-name').textContent='Rádio indisponível';document.querySelector('#song-name').textContent='Confira a configuração da estação.';status.textContent='Não foi possível obter a rádio configurada.';return ''}};
+    const updateStation=async({replaceStream=false}={})=>{try{const response=await fetch(`${selectedAzuraOrigin}/api/nowplaying/${stationSlug}`,{cache:'no-store'});if(!response.ok) throw new Error('now-playing');const data=await response.json(),streamUrl=data?.station?.listen_url||'',artUrl=data?.now_playing?.song?.art||'';document.querySelector('#radio-name').textContent=data?.station?.name||'WKG Play';document.querySelector('#song-name').textContent=data?.now_playing?.song?.text||'Ao vivo';const art=document.querySelector('.art');if(artUrl){art.style.backgroundImage=`url("${artUrl.replace(/"/g,'%22')}")`;art.innerHTML=''}setMediaSession(data);renderHistory(data?.song_history);status.textContent=copyright;if(streamUrl&&(replaceStream||!audio.src)){lastStreamUrl=streamUrl;audio.src=streamUrl}return streamUrl}catch(_){document.querySelector('#radio-name').textContent='Rádio indisponível';document.querySelector('#song-name').textContent='Confira a configuração da estação.';status.textContent='Não foi possível obter a rádio configurada.';return ''}};
     const startBufferGrace=()=>{clearBufferTimer();if(!wantsPlayback||manualPause||isActive()) return;bufferTimer=setTimeout(()=>scheduleReconnect(),12000)};
     const scheduleReconnect=()=>{if(!wantsPlayback||manualPause||reconnectTimer||recovering||navigator.onLine===false) return;clearBufferTimer();const delay=Math.min(30000,2000*2**reconnectAttempt);reconnectAttempt=Math.min(reconnectAttempt+1,4);reconnectTimer=setTimeout(()=>{reconnectTimer=null;recoverStream()},delay)};
     const recoverStream=async()=>{if(!wantsPlayback||manualPause||recovering||navigator.onLine===false) return;recovering=true;let retry=false;try{const streamUrl=await updateStation({replaceStream:true});const target=streamUrl||lastStreamUrl||audio.currentSrc||audio.src;if(!target) throw new Error('stream');if(audio.src!==target) audio.src=target;audio.load();await audio.play()}catch(_){retry=true}finally{recovering=false;if(retry) scheduleReconnect()}};
     const startPlayback=async()=>{wantsPlayback=true;manualPause=false;clearReconnectTimer();try{if(!audio.src) await updateStation({replaceStream:true});if(!audio.src) throw new Error('stream');await audio.play()}catch(_){scheduleReconnect()}};
     const pausePlayback=()=>{wantsPlayback=false;manualPause=true;clearReconnectTimer();clearBufferTimer();audio.pause()};
     playButton.onclick=()=>audio.paused?startPlayback():pausePlayback();
-    audio.addEventListener('playing',()=>{reconnectAttempt=0;clearReconnectTimer();clearBufferTimer();updateButton(true)});
-    audio.addEventListener('pause',()=>{updateButton(false);if(wantsPlayback&&!manualPause&&!audio.ended) scheduleReconnect()});
+    audio.addEventListener('playing',()=>{reconnectAttempt=0;clearReconnectTimer();clearBufferTimer();updateButton(true);if(backgroundAudioPilot&&('mediaSession' in navigator)) navigator.mediaSession.playbackState='playing'});
+    audio.addEventListener('pause',()=>{updateButton(false);if(backgroundAudioPilot&&('mediaSession' in navigator)) navigator.mediaSession.playbackState='paused';if(wantsPlayback&&!manualPause&&!audio.ended) scheduleReconnect()});
     audio.addEventListener('error',scheduleReconnect);
     audio.addEventListener('ended',scheduleReconnect);
     audio.addEventListener('waiting',startBufferGrace);
@@ -51,6 +76,7 @@
     audio.addEventListener('timeupdate',clearBufferTimer);
     window.addEventListener('offline',()=>{clearReconnectTimer();clearBufferTimer()});
     window.addEventListener('online',()=>{if(wantsPlayback&&!manualPause&&!isActive()) scheduleReconnect()});
+    configureBackgroundAudioPilot();
     updateStation({replaceStream:true});
   </script>
 </body>

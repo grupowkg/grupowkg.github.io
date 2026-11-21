@@ -1,0 +1,16 @@
+{
+  "name": "Rádio JR Fitness | WKG Play",
+  "short_name": "JR Fitness",
+  "start_url": "/jr-fitness/",
+  "scope": "/jr-fitness/",
+  "display": "standalone",
+  "background_color": "#0b0b0e",
+  "theme_color": "#0b0b0e",
+  "icons": [
+    {
+      "src": "/wkg-play-logo.jpg",
+      "sizes": "any",
+      "type": "image/jpeg"
+    }
+  ]
+}
